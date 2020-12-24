@@ -1,8 +1,22 @@
-# Aliases
+# Custom Commands
 alias vi=vim
 alias pulseaudio-start="pulseaudio --exit-idle-time=-1 --daemonize -vv" alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
 alias cleart="clear && pfetch"
+
+# Git aliases
+alias gc="git commit"
+alias gs="git status"
+alias gl="git log"
+alias ga="git add"
+alias gr="git rm"
+
+# Dot aliases
 alias dots="git --git-dir=$HOME/repos/dots --work-tree=$HOME"
+alias ds="dots status -uno"
+alias dl="dots log"
+alias dc="dots commit"
+alias da="dots add"
+alias dr="dots rm"
 
 # Colors
 alias ls="ls -oH --color=auto --group-directories-first"

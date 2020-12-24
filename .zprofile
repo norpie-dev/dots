@@ -1,0 +1,1 @@
+/home/konsta/.config/zsh/.zshenv

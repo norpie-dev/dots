@@ -1,0 +1,4 @@
+#! /bin/sh
+
+free=$(free -h | awk '/^Mem:/ {print $4}')
+echo 🧠 $free

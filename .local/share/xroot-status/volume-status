@@ -1,0 +1,5 @@
+#!/bin/sh
+
+volume=$(pamixer --get-volume)
+
+echo 🔊 $volume%

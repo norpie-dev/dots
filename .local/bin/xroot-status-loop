@@ -1,0 +1,7 @@
+#!/bin/sh
+
+while [ : ]
+do
+  xroot-status-update
+  sleep 1s  
+done

@@ -1,0 +1,7 @@
+#!/usr/bin/sh
+
+[[ $# == 0 ]] && echo "more arguments needed" && exit 0
+
+CONFIG_PATH=$1_CONFIG
+
+vim "${!CONFIG_PATH}"

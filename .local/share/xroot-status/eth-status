@@ -1,0 +1,3 @@
+#! /bin/sh
+value=$(curl -s "eur.rate.sx/1ETH")
+echo ⚙️  $value

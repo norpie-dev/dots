@@ -1,0 +1,10 @@
+#!/bin/sh
+
+[[ $# == 0 ]] && echo "more arguments needed" && exit 0
+
+CONFIG_PATH=$1_CONFIG
+
+CONFIG_DIR=$(dirname "${!CONFIG_PATH}")
+
+cd $CONFIG_DIR
+sudo make clean install

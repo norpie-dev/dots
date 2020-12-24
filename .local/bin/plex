@@ -1,0 +1,1 @@
+exec /usr/lib/plexmediaserver/Plex\ Media\ Server & disown

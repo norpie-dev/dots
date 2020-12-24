@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [[ -f ~/.cache/weather.txt ]]; then    
+    updatecheck=$(cat ~/.cache/weather.txt | awk 'NR==2')
+fi
+
+date=$(date +%d%m%Y%H)
+
+if [[ $date = $updatecheck ]]; then
+    cat ~/.cache/weather.txt | awk 'NR==1'
+    exit 0
+fi
+
+weather="🌡$(curl "wttr.in/$1?format=1" -s | awk {'print $2'})"
+
+echo $weather > ~/.cache/weather.txt
+echo $date >> ~/.cache/weather.txt
+echo $weather

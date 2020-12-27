@@ -10,7 +10,7 @@ call vundle#begin('~/.config/vim/bundle')
 Plugin 'preservim/nerdtree'
 Plugin 'mbbill/undotree'
 Plugin 'jremmen/vim-ripgrep'
-Plugin 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim' 
 Plugin 'morhetz/gruvbox'
 
 " Programming
@@ -58,7 +58,7 @@ set smartcase
 set encoding=utf-8
 set noswapfile
 set nobackup
-set undodir=~/.vim/undodir
+set undodir=~/.config/vim/undodir
 set undofile
 set incsearch
 set termguicolors
@@ -71,7 +71,6 @@ set updatetime=50
 set viminfo+=n~/.config/vim/viminfo
 set runtimepath+=~/.config/vim
 set ruler
-
 set laststatus=2
 set noshowmode
 
@@ -82,9 +81,15 @@ let mapleader="<"
 let g:lightline = {'colorscheme': 'jellybeans',}
 
 " Custom mappings
+nmap sh :vertical-resize -1<CR>
+nmap sl :vertical-resize +1<CR>
+nmap sj :resize +1<CR>
+nmap sk :resize -1<CR>
 
-nmap <Leader>. :tabn<CR>
-nmap <Leader>, :tabp<CR>
+nmap mh <C-w>h
+nmap ml <C-w>l
+nmap mj <C-w>j
+nmap mk <C-w>k
 
 " Custom Plugin Mappings
 nmap <Leader>n :NERDTreeToggle<CR>
@@ -108,5 +113,4 @@ autocmd VimLeave * silent exec "! echo -ne '\e[5 q'"
 " Autocmds
 " autocmd vimenter * NERDTree "IDK wether to enable this, getting mixed
 " feelings
-autocmd! BufWritePost config.h !sudo make clean install
-autocmd! bufwritepost .vimrc source %
+autocmd! BufWritePost vimrc source %

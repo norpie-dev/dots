@@ -1,1 +1,1 @@
-/home/konsta/.config/zsh/.zshenv
+.config/zsh/.zprofile

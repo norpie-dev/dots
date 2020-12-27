@@ -9,6 +9,7 @@ alias gs="git status"
 alias gl="git log"
 alias ga="git add"
 alias gr="git rm"
+alias gp="git push"
 
 # Dot aliases
 alias dots="git --git-dir=$HOME/repos/dots --work-tree=$HOME"
@@ -17,6 +18,7 @@ alias dl="dots log"
 alias dc="dots commit"
 alias da="dots add"
 alias dr="dots rm"
+alias dp="dots push"
 
 # Colors
 alias ls="ls -oH --color=auto --group-directories-first"
@@ -27,7 +29,7 @@ alias diff="diff --color=auto"
 alias repos="cd ~/repos"
 
 # Always Options
-alias l="ls -a"
+alias l="ls -A"
 alias la="ls -a"
 alias shutdown="sudo shutdown -h now"
 alias plex="sudo plex"
@@ -47,7 +49,7 @@ configd() {
 export PATH=$PATH:$HOME/.local/bin:$HOME/.local/share/xroot-status
 
 #XDG
-export XDG_DATA_HOME=~/.local/share
+export XDG_DATA_HOME=$HOME/.local/share
 
 # Prompt
 export NEWLINE=$'\n'
@@ -68,29 +70,30 @@ export VISUAL="vim"
 export zsh_CONFIG="/home/konsta/.config/zsh/.zshrc"
 export vim_CONFIG="/home/konsta/.config/vim/vimrc"
 export dwm_CONFIG="/home/konsta/.config/dwm/config.h"
-export dmenu_CONFIG="/home/konsta/.config/suckless/dmenu/config.h"
+export dmenu_CONFIG="/home/konsta/.config/dmenu/config.h"
 export st_CONFIG="/home/konsta/.config/st/config.h"
 export ssh_CONFIG="/home/konsta/.config/ssh/config"
 export xinit_CONFIG="/home/konsta/.config/X11/xinitrc"
 export xresources_CONFIG="/home/konsta/.config/X11/Xresources"
 
 # Moving dot dirs to .config
-export VIMINIT="source ~/.config/vim/vimrc"
-export GNUPGHOME="~/.config/gnupg"
-export __GL_SHADER_DISK_CACHE_PATH="~/.config/nvidia"
-#export XAUTHORITY="~/.config/X11/Xauthority"
-export CARGO_HOME="~/.local/share/cargo"
-alias ssh="ssh -F ~/.config/ssh/config"
+export VIMINIT="source $HOME/.config/vim/vimrc"
+export GNUPGHOME="$HOME/.config/gnupg"
+export __GL_SHADER_DISK_CACHE_PATH="$HOME/.config/nvidia"
+#export XAUTHORITY="$HOME/.config/X11/Xauthority"
+export CARGO_HOME="$HOME/.local/share/cargo"
+export NVM_DIR="$HOME/.config/nvm"
+alias ssh="ssh -F $HOME/.config/ssh/config"
 
 # Plugins
-source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+#source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Plugin settings
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # History file
-export HISTFILE='~/.config/zsh/histfile'
+export HISTFILE='$HOME/.config/zsh/histfile'
 export HISTSIZE=1000000
 export SAVEHIST=1000000
 export HISTCONTROL=ignoreboth:erasedumps

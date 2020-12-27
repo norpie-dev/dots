@@ -1,8 +1,0 @@
-https://dwm.suckless.org/patches/cool_autostart/dwm-cool-autostart-6.2.diff
-https://dwm.suckless.org/patches/nodmenu/dwm-nodmenu-6.2.diff
-https://dwm.suckless.org/patches/notitle/dwm-notitle-6.2.diff
-https://dwm.suckless.org/patches/removeborder/dwm-removeborder-20200520-f09418b.diff
-https://dwm.suckless.org/patches/swallow/dwm-swallow-20201211-61bb8b2.diff
-https://dwm.suckless.org/patches/vanitygaps/dwm-vanitygaps-20200610-f09418b.diff
-https://dwm.suckless.org/patches/warp/dwm-warp-6.2.diff
-https://dwm.suckless.org/patches/xresources/dwm-xresources-6.2.diff

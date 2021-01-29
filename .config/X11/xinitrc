@@ -11,4 +11,4 @@ fi
 # start some nice programs
 
 nvidia-settings --load-config-only &
-ssh-agent dwm
+dbus-launch ssh-agent dwm

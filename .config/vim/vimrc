@@ -15,11 +15,12 @@ Plugin 'morhetz/gruvbox'
 
 " Programming
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'ternjs/tern_for_vim', { 'for': 'javascript' }
 
 " Web-dev
-Plugin 'mattn/emmet-vim'
+Plugin 'mattn/emmet-vim' 
 Plugin 'Yggdroot/indentLine'
-Plugin 'MaxMEllon/vim-jsx-pretty'
+Plugin 'MaxMEllon/vim-jsx-pretty' 
 Plugin 'tpope/vim-commentary'
 Plugin 'dense-analysis/ale'
 
@@ -80,6 +81,8 @@ let mapleader="<"
 
 let g:lightline = {'colorscheme': 'jellybeans',}
 
+let g:ycm_global_ycm_extra_conf = '/home/konsta/config/vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+
 " Custom mappings
 nmap sh :vertical-resize -1<CR>
 nmap sl :vertical-resize +1<CR>
@@ -96,6 +99,8 @@ nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>g :Goyo<CR>
 
 " Terminal color fix
+set t_Co=256
+
 if &term =~ '256color'
     set t_ut=
 endif
@@ -106,11 +111,18 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " Plugin settings
 let g:vim_markdown_folding_disabled = 1
 
+" Start autocompletion after 4 chars
+let g:ycm_min_num_of_chars_for_completion = 4
+let g:ycm_min_num_identifier_candidate_chars = 4
+let g:ycm_enable_diagnostic_highlighting = 0
+
 " Retarded zsh fix for cursor shape
 autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
 autocmd VimLeave * silent exec "! echo -ne '\e[5 q'" 
 
 " Autocmds
+" enhance YCM JS completion with tern's smarts
+autocmd FileType javascript setlocal omnifunc=tern#Complete
 " autocmd vimenter * NERDTree "IDK wether to enable this, getting mixed
 " feelings
 autocmd! BufWritePost vimrc source %

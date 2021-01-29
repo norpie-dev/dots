@@ -4,11 +4,8 @@ date=$(date-status)
 day=$(day-status)
 time=$(time-status)
 volume=$(volume-status)
-weather=$(weather-status)
 btc=$(btc-status)
-cputemp=$(cpu-t-status)
-ip=$(ip-status)
 
-status="$ip | $cputemp | $btc | $weather | $volume | $time | $day | $date"
+status="$btc | $volume | $time | $day | $date"
 
 xsetroot -name "$status"

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mpv https://youtu.be/5qap5aO4i9A --screen=2 --wid=0 --ytdl-format="best" --hwdec=d3d11va & disown

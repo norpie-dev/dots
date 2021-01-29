@@ -7,4 +7,4 @@ CONFIG_PATH=$1_CONFIG
 CONFIG_DIR=$(dirname "${!CONFIG_PATH}")
 
 cd $CONFIG_DIR
-sudo make clean install
+sudo make install clean 

@@ -1,7 +1,6 @@
 set nocompatible
 
 filetype off
-
 set rtp+=~/.config/vim/bundle/Vundle.vim
 
 call vundle#begin('~/.config/vim/bundle')
@@ -9,28 +8,21 @@ call vundle#begin('~/.config/vim/bundle')
 " General
 Plugin 'preservim/nerdtree'
 Plugin 'mbbill/undotree'
-Plugin 'jremmen/vim-ripgrep'
 Plugin 'kien/ctrlp.vim' 
 Plugin 'morhetz/gruvbox'
 
-" Programming
-Plugin 'ycm-core/YouCompleteMe'
-Plugin 'ternjs/tern_for_vim', { 'for': 'javascript' }
+" Programming 
+Plugin 'ycm-core/YouCompleteMe' 
 
 " Web-dev
-Plugin 'mattn/emmet-vim' 
-Plugin 'Yggdroot/indentLine'
-Plugin 'MaxMEllon/vim-jsx-pretty' 
-Plugin 'tpope/vim-commentary'
-Plugin 'dense-analysis/ale'
+"Plugin 'mattn/emmet-vim' 
+"Plugin 'Yggdroot/indentLine'
+"Plugin 'tpope/vim-commentary'
+"Plugin 'dense-analysis/ale'
 
 " Visual aid
 Plugin 'itchyny/lightline.vim'
-
-" Writing
-Plugin 'godlygeek/tabular'
 Plugin 'junegunn/goyo.vim'
-" Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()
 
@@ -43,7 +35,6 @@ colorscheme gruvbox
 " Sets
 
 set background=dark
-set guicursor=
 set relativenumber
 set nohlsearch
 set hidden
@@ -71,6 +62,7 @@ set cmdheight=2
 set updatetime=50
 set viminfo+=n~/.config/vim/viminfo
 set runtimepath+=~/.config/vim
+set omnifunc=syntaxcomplete#Complete
 set ruler
 set laststatus=2
 set noshowmode
@@ -80,8 +72,10 @@ set noshowmode
 let mapleader="<"
 
 let g:lightline = {'colorscheme': 'jellybeans',}
-
 let g:ycm_global_ycm_extra_conf = '/home/konsta/config/vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+
+" Custom aliases
+cnoreabbrev W w !sudo tee %
 
 " Custom mappings
 nmap sh :vertical-resize -1<CR>
@@ -89,10 +83,15 @@ nmap sl :vertical-resize +1<CR>
 nmap sj :resize +1<CR>
 nmap sk :resize -1<CR>
 
+" Move to window
 nmap mh <C-w>h
 nmap ml <C-w>l
 nmap mj <C-w>j
 nmap mk <C-w>k
+
+" Move to tab
+nmap zl :tabn<CR>
+nmap zh :tabp<CR>
 
 " Custom Plugin Mappings
 nmap <Leader>n :NERDTreeToggle<CR>
@@ -108,9 +107,6 @@ endif
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-" Plugin settings
-let g:vim_markdown_folding_disabled = 1
-
 " Start autocompletion after 4 chars
 let g:ycm_min_num_of_chars_for_completion = 4
 let g:ycm_min_num_identifier_candidate_chars = 4
@@ -120,9 +116,4 @@ let g:ycm_enable_diagnostic_highlighting = 0
 autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
 autocmd VimLeave * silent exec "! echo -ne '\e[5 q'" 
 
-" Autocmds
-" enhance YCM JS completion with tern's smarts
-autocmd FileType javascript setlocal omnifunc=tern#Complete
-" autocmd vimenter * NERDTree "IDK wether to enable this, getting mixed
-" feelings
 autocmd! BufWritePost vimrc source %

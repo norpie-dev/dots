@@ -4,6 +4,10 @@ alias pulseaudio-start="pulseaudio --exit-idle-time=-1 --daemonize -vv"
 alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
 alias cleart="clear && pfetch"
 alias workspace='vim +split +"wincmd j" +term +"wincmd j" +q +"resize -15" +NERDTreeToggle' # Vim IDE thingy
+alias node80="sudo node app.js"
+alias shutdown="sudo shutdown -h now"
+alias reboot="sudo reboot"
+alias plex="sudo plex"
 
 # Git aliases
 alias gc="git commit"
@@ -22,18 +26,20 @@ alias dr="dots rm"
 alias dp="dots push"
 
 # Colors
-alias ls="ls -oH --color=auto --group-directories-first"
+alias ls="ls -ovH --color=auto --group-directories-first"
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"
 
 # Custom Bookmarks
 alias repos="cd ~/repos"
+# Current project
+alias project="cd ~/repos/outstanding-trader"
 
 # Always Options
 alias l="ls -A"
 alias la="ls -a"
-alias shutdown="sudo shutdown -h now"
-alias plex="sudo plex"
+
+alias mkdir="mkdir -p"
 
 alias mv="mv -v"
 alias cp="cp -v"
@@ -88,7 +94,9 @@ export __GL_SHADER_DISK_CACHE_PATH="~/.config/nvidia"
 #export XAUTHORITY="~/.config/X11/Xauthority"
 export CARGO_HOME="~/.local/share/cargo"
 export NVM_DIR="~/.config/nvm"
-alias ssh="ssh -F ~/.config/ssh/config"
+alias ssh="ssh -F ~/.config/ssh/config -o UserKnownHostsFile=~/.config/ssh/known_hosts"
+export LEIN_HOME="$XDG_DATA_HOME"/lein
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 
 # Random program settings
 export _JAVA_AWT_WM_NONREPARENTING=1    # Fix for Java applications in dwm
@@ -147,7 +155,7 @@ precmd() {
 }
 
 _fix_cursor() {
-       echo -ne '\e[5 q'
+    echo -ne '\e[5 q'
 }
 
 # Auto-complete
@@ -164,4 +172,4 @@ _comp_options+=(globdots)
 fast-theme zdharma
 
 # start commmands
-cleart
+clear

@@ -8,11 +8,13 @@ alias node80="sudo node app.js"
 alias shutdown="sudo shutdown -h now"
 alias reboot="sudo reboot"
 alias plex="sudo plex"
+alias update="yay -Syu --noconfirm"
 
 # Git aliases
 alias gc="git commit"
 alias gs="git status"
-alias gl="git log" alias ga="git add"
+alias gl="git log" 
+alias ga="git add"
 alias gr="git rm"
 alias gp="git push"
 
@@ -57,7 +59,7 @@ scriptd() {
 }
 
 # Exports
-export PATH=$PATH:~/.local/bin:~/.local/share/xroot-status
+export PATH=$PATH:~/.local/bin:~/.local/bin/xroot-status
 
 #XDG
 export XDG_DATA_HOME=~/.local/share
@@ -79,16 +81,18 @@ export VISUAL="vim"
 
 # Config paths
 export zsh_CONFIG="$HOME/.config/zsh/.zshrc"
-export vim_CONFIG="$HOME/.config/vim/vimrc"
+export vim_CONFIG="$HOME/.config/vim/init.vim"
+export vim_CONFIGDIR="$HOME/.config/vim"
 export dwm_CONFIG="$HOME/.config/dwm/config.h"
 export dmenu_CONFIG="$HOME/.config/dmenu/config.h"
 export st_CONFIG="$HOME/.config/st/config.h"
 export ssh_CONFIG="$HOME/.config/ssh/config"
 export xinit_CONFIG="$HOME/.config/X11/xinitrc"
 export xresources_CONFIG="~/.config/X11/Xresources"
+export autostart_CONFIG="$HOME/.config/init/autostart.sh"
 
 # Moving dot dirs to .config
-export VIMINIT="source ~/.config/vim/vimrc"
+export VIMINIT="source ~/.config/vim/init.vim"
 export GNUPGHOME="~/.config/gnupg"
 export __GL_SHADER_DISK_CACHE_PATH="~/.config/nvidia"
 #export XAUTHORITY="~/.config/X11/Xauthority"

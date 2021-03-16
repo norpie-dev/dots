@@ -8,3 +8,4 @@ xroot-status-start
 sudo rm "/root/Library/Application Support/Plex Media Server/plexmediaserver.pid" & sudo plex
 pulseaudio -D --exit-idle-time=-1
 xwallpaper --zoom ~/.config/wallpaper/wallpaper.png
+setxkbmap -option caps:escape

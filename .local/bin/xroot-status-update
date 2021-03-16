@@ -4,8 +4,8 @@ date=$(date-status)
 day=$(day-status)
 time=$(time-status)
 btc=$(btc-status)
-spotify=$(spotify-status)
+music=$(music-status)
 
-status="$spotify | $btc | $time | $day | $date"
+status="$music | $btc | $time | $day | $date"
 
 xsetroot -name "$status"

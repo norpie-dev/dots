@@ -1,2 +1,0 @@
-#! /bin/sh
-echo 🥵 $(sensors | awk '/^Tdie/ {print $2}')

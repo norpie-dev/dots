@@ -1,5 +1,0 @@
-#!/bin/sh
-
-day=$(date +%A)
-
-echo $day

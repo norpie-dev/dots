@@ -1,3 +1,0 @@
-#! /bin/sh
-value=$(python ~/.local/bin/python/kraken-api.py | cut -c 1-5)
-echo 🪙  €$value

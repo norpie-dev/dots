@@ -17,6 +17,8 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Retarded zsh fix for cursor shape
 autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
+autocmd InsertEnter * silent exec "! echo -ne '\e[5 q'"
+autocmd InsertLeave * silent exec "! echo -ne '\e[1 q'"
 autocmd VimLeave * silent exec "! echo -ne '\e[5 q'"
 
 autocmd! BufWritePost vimrc source %

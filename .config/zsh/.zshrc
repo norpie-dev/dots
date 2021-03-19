@@ -1,6 +1,6 @@
 # Custom Commands
 alias vi=vim
-alias pulseaudio-start="pulseaudio --exit-idle-time=-1 --daemonize -vv" 
+alias pulseaudio-start="pulseaudio --exit-idle-time=-1 --daemonize -vv"
 alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
 alias cleart="clear && pfetch"
 alias workspace='vim +split +"wincmd j" +term +"wincmd j" +q +"resize -15" +NERDTreeToggle' # Vim IDE thingy
@@ -13,7 +13,7 @@ alias update="yay -Syu --noconfirm"
 # Git aliases
 alias gc="git commit"
 alias gs="git status"
-alias gl="git log" 
+alias gl="git log"
 alias ga="git add"
 alias gr="git rm"
 alias gp="git push"
@@ -55,13 +55,15 @@ configd() {
 }
 
 scriptd() {
-    cd $HOME/.local/bin
+    cd $SCRIPT_DIR
 }
 
 # Exports
 export PATH=$PATH:~/.local/bin:~/.local/bin/xroot-status
 
 #XDG
+export XDG_CONFIG_HOME=~/.config
+export XDG_CACHE_HOME=~/.cache
 export XDG_DATA_HOME=~/.local/share
 
 # Prompt
@@ -69,7 +71,6 @@ export NEWLINE=$'\n'
 export PROMPT="%F{27}%B%n%b %F{15}on %F{27}%B%m%b %F{15}in %F{27}%B%~%b ${NEWLINE}%F{15}%T %F{27}%B<>%b %F{15}"
 
 # Locale
-export LC_ALL="en_NZ.UTF-8"
 export LANG="en_NZ.UTF-8"
 
 # Default apps
@@ -90,6 +91,7 @@ export ssh_CONFIG="$HOME/.config/ssh/config"
 export xinit_CONFIG="$HOME/.config/X11/xinitrc"
 export xresources_CONFIG="~/.config/X11/Xresources"
 export autostart_CONFIG="$HOME/.config/init/autostart.sh"
+export SCRIPT_DIR="$HOME/.local/bin"
 
 # Moving dot dirs to .config
 export VIMINIT="source ~/.config/vim/init.vim"
@@ -118,10 +120,30 @@ export HISTSIZE=1000000
 export SAVEHIST=1000000
 export HISTCONTROL=ignoreboth:erasedumps
 
-# Vim
-# Enable it
+# vi mode
 bindkey -v
 export KEYTIMEOUT=1
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+   if [[ ${KEYMAP} == vicmd ]] ||
+      [[ $1 = 'block' ]]; then
+      echo -ne '\e[1 q'
+   elif [[ ${KEYMAP} == main ]] ||
+        [[ ${KEYMAP} == viins ]] ||
+        [[ ${KEYMAP} = '' ]] ||
+        [[ $1 = 'beam' ]]; then
+      echo -ne '\e[5 q'
+   fi
+}
+zle -N zle-keymap-select
+zle-line-init() {
+    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+    echo -ne "\e[5 q"
+}
+zle -N zle-line-init
+echo -ne '\e[5 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Use vim keys in tab complete menu:
 zstyle ':completion:*' menu select
@@ -136,30 +158,11 @@ bindkey -v '^?' backward-delete-char
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# Change cursor when vi
-function zle-keymap-select () {
-    case $KEYMAP in
-        vicmd) echo -ne '\e[1 q';;      # block
-        viins|main) echo -ne '\e[5 q';; # beam
-    esac
-}
-zle -N zle-keymap-select
-zle-line-init() {
-    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    echo -ne "\e[5 q"
-}
-zle -N zle-line-init
-
 # Blank line after output
 precmd() {
-    _fix_cursor
     precmd() {
         print -P "$(date +%H:%M) %F{27}%B</>%b%F{15}"
     }
-}
-
-_fix_cursor() {
-    echo -ne '\e[5 q'
 }
 
 # Auto-complete

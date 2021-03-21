@@ -18,7 +18,7 @@ list_all_files() {
     done
 }
 
-[ $# != 1 ] && echo "$usage" && list_all_files && exit 1
+[ $# != 1 ] && apply_default_wallpaper && echo "$usage" && list_all_files && exit 1
 
 [ ! -f "$HOME/.config/wallpaper/selection/$1.png" ] && echo 'not exists' && apply_default_wallpaper && exit 1
 

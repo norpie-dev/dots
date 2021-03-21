@@ -1,0 +1,20 @@
+[color]
+	ui = true
+	branch = true
+	diff = true
+	interactive = true
+	status = true
+[user]
+	name = Konsta Kuosmanen
+	email = konstamskuosmanen@gmail.com
+[core]
+	editor = vim
+	pager = less
+	sshCommand = ssh -o UserKnownHostsFile=~/.config/ssh/known_hosts -o StrictHostKeyChecking=no
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[init]
+	defaultBranch = main
+[alias]
+	root = rev-parse --show-toplevel
+	ignore = !ignore

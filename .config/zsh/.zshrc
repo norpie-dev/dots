@@ -17,6 +17,7 @@ alias gl="git log"
 alias ga="git add"
 alias gr="git rm"
 alias gp="git push"
+alias gi="git ignore"
 
 # Dot aliases
 alias dots="git --git-dir=$HOME/.dots --work-tree=$HOME"
@@ -95,6 +96,7 @@ export SCRIPT_DIR="$HOME/.local/bin"
 
 # Moving dot dirs to .config
 export VIMINIT="source ~/.config/vim/init.vim"
+export VIMDOTDIR="source ~/.config/vim"
 export GNUPGHOME="~/.config/gnupg"
 export __GL_SHADER_DISK_CACHE_PATH="~/.config/nvidia"
 #export XAUTHORITY="~/.config/X11/Xauthority"

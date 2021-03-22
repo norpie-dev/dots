@@ -17,4 +17,5 @@
 	defaultBranch = main
 [alias]
 	root = rev-parse --show-toplevel
-	ignore = !ignore
+	ignore = !git-ignore
+	loglive = !git-loglive

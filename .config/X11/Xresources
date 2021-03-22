@@ -1,6 +1,6 @@
 *alpha: 0.8
 ! ! hard contrast: *background: #1d2021
-*background: #201c1c
+*background: #1B1D1E
 ! ! soft contrast: *background: #32302f
 *foreground: #ebdbb2
 ! ! Black + DarkGrey

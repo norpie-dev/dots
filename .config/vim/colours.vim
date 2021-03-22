@@ -1,5 +1,5 @@
 """ Colorscheme Configuration
-colorscheme molokai
+colorscheme molokai 
 set background=dark
 " Lightline
 set laststatus=2

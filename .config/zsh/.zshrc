@@ -13,7 +13,7 @@ alias update="yay -Syu --noconfirm"
 # Git aliases
 alias gc="git commit"
 alias gs="git status"
-alias gl="git log"
+alias gl="git log --oneline --decorate --all --graph"
 alias ga="git add"
 alias gr="git rm"
 alias gp="git push"
@@ -22,7 +22,7 @@ alias gi="git ignore"
 # Dot aliases
 alias dots="git --git-dir=$HOME/.dots --work-tree=$HOME"
 alias ds="dots status -uno"
-alias dl="dots log"
+alias dl="dots log --oneline --decorate --all --graph"
 alias dc="dots commit"
 alias da="dots add"
 alias dr="dots rm"
@@ -86,11 +86,12 @@ export zsh_CONFIG="$HOME/.config/zsh/.zshrc"
 export vim_CONFIG="$HOME/.config/vim/init.vim"
 export vim_CONFIGDIR="$HOME/.config/vim"
 export dwm_CONFIG="$HOME/.config/dwm/config.h"
+export git_CONFIG="$HOME/.config/git/config"
 export dmenu_CONFIG="$HOME/.config/dmenu/config.h"
 export st_CONFIG="$HOME/.config/st/config.h"
 export ssh_CONFIG="$HOME/.config/ssh/config"
 export xinit_CONFIG="$HOME/.config/X11/xinitrc"
-export xresources_CONFIG="~/.config/X11/Xresources"
+export xresources_CONFIG="$HOME/.config/X11/Xresources"
 export autostart_CONFIG="$HOME/.config/init/autostart.sh"
 export SCRIPT_DIR="$HOME/.local/bin"
 
@@ -105,8 +106,8 @@ export NVM_DIR="~/.config/nvm"
 alias ssh="ssh -F ~/.config/ssh/config -o UserKnownHostsFile=~/.config/ssh/known_hosts"
 export LEIN_HOME="$XDG_DATA_HOME"/lein
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
 
-# Random program settings
 export _JAVA_AWT_WM_NONREPARENTING=1    # Fix for Java applications in dwm
 
 # Plugins

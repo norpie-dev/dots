@@ -25,8 +25,6 @@ Plugin 'junegunn/goyo.vim'
 
 " Colorschemes
 Plugin 'flazz/vim-colorschemes'
-Plugin 'morhetz/gruvbox'
-Plugin 'sickill/vim-monokai'
 
 " General Improvements
 Plugin 'mbbill/undotree'

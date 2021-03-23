@@ -60,7 +60,7 @@ scriptd() {
 }
 
 # Exports
-export PATH=$PATH:~/.local/bin:~/.local/bin/xroot-status
+export PATH=$PATH:~/.local/bin:~/.local/bin/xroot-panels
 
 #XDG
 export XDG_CONFIG_HOME=~/.config
@@ -89,6 +89,7 @@ export dwm_CONFIG="$HOME/.config/dwm/config.h"
 export git_CONFIG="$HOME/.config/git/config"
 export dmenu_CONFIG="$HOME/.config/dmenu/config.h"
 export st_CONFIG="$HOME/.config/st/config.h"
+export xroot_CONFIG="$HOME/.local/bin/xroot-status-update"
 export ssh_CONFIG="$HOME/.config/ssh/config"
 export xinit_CONFIG="$HOME/.config/X11/xinitrc"
 export xresources_CONFIG="$HOME/.config/X11/Xresources"

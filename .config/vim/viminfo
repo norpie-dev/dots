@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/icon
+~MSle0~/pr
 
 # Last Substitute Search Pattern:
 ~MSle0&pacman\/
@@ -20,8 +20,10 @@
 $
 
 # Command Line History (newest to oldest):
+:file
+|2,0,1617308589,,"file"
 :w
-|2,0,1617300258,,"w"
+|2,0,1617302956,,"w"
 :s/pacman\///g
 |2,0,1617290269,,"s/pacman\\///g"
 :s/pacman\//g
@@ -118,10 +120,14 @@ $
 |2,0,1615914574,,"NERDTreeToggle"
 :NerdTreeToggle
 |2,0,1615914570,,"NerdTreeToggle"
-:tab
-|2,0,1615914518,,"tab"
 
 # Search String History (newest to oldest):
+?/pr
+|2,1,1617303005,47,"pr"
+?/which project
+|2,1,1617303002,47,"which project"
+?/proe
+|2,1,1617302997,47,"proe"
 ?/icon
 |2,1,1617293981,47,"icon"
 ?/info
@@ -216,12 +222,6 @@ $
 |2,1,1615842255,47,"ZQ"
 ?/SHIFT
 |2,1,1615842102,47,"SHIFT"
-?/int dia
-|2,1,1615842017,47,"int dia"
-?/2 * CORNER
-|2,1,1615842007,47,"2 * CORNER"
-?/} while (ev.ty
-|2,1,1615841814,47,"} while (ev.ty"
 
 # Expression History (newest to oldest):
 
@@ -233,38 +233,93 @@ $
 "0	LINE	0
 	        echo `git relative $arg` >> `git root`/.gitignore
 |3,0,0,1,1,0,1617301175,"        echo `git relative $arg` >> `git root`/.gitignore"
-"1	LINE	0
+""1	LINE	0
 	
-|3,0,1,1,1,0,1617301173,""
+|3,1,1,1,1,0,1617310012,""
 "2	LINE	0
-	        echo `git relative $arg` >> `git root`/.gitignore
-|3,0,2,1,1,0,1617301171,"        echo `git relative $arg` >> `git root`/.gitignore"
+	
+|3,0,2,1,1,0,1617310011,""
 "3	LINE	0
-	    if $dots; then
-	       echo `git relative $arg` >> `git root`/.gitignore
-|3,0,3,1,2,0,1617301168,"    if $dots; then","       echo `git relative $arg` >> `git root`/.gitignore"
+	
+|3,0,3,1,1,0,1617309921,""
 "4	LINE	0
-	
-|3,0,4,1,1,0,1617301062,""
+	export ZDOTDIR='/home/konsta/.config/zsh'
+|3,0,4,1,1,0,1617309920,"export ZDOTDIR='/home/konsta/.config/zsh'"
 "5	LINE	0
+	neofetch
+|3,0,5,1,1,0,1617309525,"neofetch"
+"6	CHAR	0
+	# Custom Commands
+	alias vi=vim
+	alias pulseaudio-start="pulseaudio --exit-idle-time=-1 --daemonize -vv"
+	alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
+	alias cleart="clear && neofetch"
+	alias workspace='vim +split +"wincmd j" +term +"wincmd j" +q +"resize -15" +NERDTreeToggle' # Vim IDE thingy
+	alias node80="sudo node app.js"
+	alias shutdown="sudo shutdown -h now"
+	alias reboot="sudo reboot"
+	alias plex="sudo plex"
+	alias update="yay -Syu --noconfirm"
 	
-|3,0,5,1,1,0,1617301061,""
-"6	LINE	0
-	    echo `git ow-prefix`$arg
-|3,0,6,1,1,0,1617300252,"    echo `git ow-prefix`$arg"
+	# Git aliases
+	alias gc="git commit"
+	alias gs="git status"
+	alias gl="git log --oneline --decorate --all --graph"
+	alias ga="git add"
+	alias gr="git rm"
+	alias gp="git push"
+	alias gi="git ignore"
+	
+	# Dot aliases
+	alias dots="git --git-dir=$HOME/.dots --work-tree=$HOME"
+	alias ds="dots status"
+	alias dl="dots log --oneline --decorate --all --graph"
+	alias dc="dots commit"
+	alias da="dots add"
+	alias dr="dots rm"
+	alias dp="dots push"
+	alias di="dots ignore --dots"
+	
+	# Colors
+	alias ls="ls -ovH --color=auto --group-directories-first"
+	alias grep="grep --color=auto"
+	alias diff="diff --color=auto"
+	
+	# Always Options
+	alias l="ls -A"
+	alias la="ls -a"
+	alias mkdir="mkdir -p"
+	alias mv="mv -v"
+	alias cp="cp -v"
+	
+	# Exports
+	export PATH=~/.local/bin:~/.local/bin/xroot-panels:$PATH
+	
+	#XDG
+	export XDG_CONFIG_HOME=~/.config
+	export XDG_CACHE_HOME=~/.cache
+	export XDG_DATA_HOME=~/.local/share
+|3,0,6,0,50,0,1617309467,"# Custom Commands","alias vi=vim","alias pulseaudio-start=\"pulseaudio --exit-idle-time=-1 --daemonize -vv\"","alias wget=\"wget --hsts-file ~/.config/wget/wget-hsts\"","alias cleart=\"clear && neofetch\"","alias workspace='vim +split +\"wincmd j\" +term +\"wincmd j\" +q +\"resize -15\" +NERDTreeToggle' # Vim IDE thingy","alias node80=\"sudo node app.js\"","alias shutdown=\"sudo shutdown -h now\"","alias reboot=\"sudo reboot\"",>26
+|<"alias plex=\"sudo plex\"","alias update=\"yay -Syu --noconfirm\"","","# Git aliases","alias gc=\"git commit\"","alias gs=\"git status\"","alias gl=\"git log --oneline --decorate --all --graph\"","alias ga=\"git add\"","alias gr=\"git rm\"","alias gp=\"git push\"","alias gi=\"git ignore\"","","# Dot aliases","alias dots=\"git --git-dir=$HOME/.dots --work-tree=$HOME\"","alias ds=\"dots status\"","alias dl=\"dots log --oneline --decorate --all --graph\"","alias dc=\"dots commit\"",>23
+|<"alias da=\"dots add\"","alias dr=\"dots rm\"","alias dp=\"dots push\"","alias di=\"dots ignore --dots\"","","# Colors","alias ls=\"ls -ovH --color=auto --group-directories-first\"","alias grep=\"grep --color=auto\"","alias diff=\"diff --color=auto\"","","# Always Options","alias l=\"ls -A\"","alias la=\"ls -a\"","alias mkdir=\"mkdir -p\"","alias mv=\"mv -v\"","alias cp=\"cp -v\"","","# Exports","export PATH=~/.local/bin:~/.local/bin/xroot-panels:$PATH","","#XDG",>34
+|<"export XDG_CONFIG_HOME=~/.config","export XDG_CACHE_HOME=~/.cache","export XDG_DATA_HOME=~/.local/share"
 "7	LINE	0
-	    fi 
-|3,0,7,1,1,0,1617300235,"    fi "
-"8	LINE	0
-	            echo `git rev-parse --show-prefix`$arg >> `git root`/.gitignore
-|3,0,8,1,1,0,1617300231,"            echo `git rev-parse --show-prefix`$arg >> `git root`/.gitignore"
-"9	CHAR	0
-	if $dots; then 
-	        echo `dots rev-parse --show-prefix`$arg >> `git root`/.gitignore
-	        echo `dots rev-parse --show-prefix`$arg
-	    else
 	
-|3,0,9,0,5,0,1617300231,"if $dots; then ","        echo `dots rev-parse --show-prefix`$arg >> `git root`/.gitignore","        echo `dots rev-parse --show-prefix`$arg","    else",""
+|3,0,7,1,1,0,1617309283,""
+"8	LINE	0
+	
+|3,0,8,1,1,0,1617309283,""
+"9	CHAR	0
+	# Functions
+	configd() {
+	    [[ $# == 0 ]] && cd ~/.config && return
+	    CONFIG_PATH=$1_CONFIG
+	    CONFIG_DIR=$(dirname ${(P)CONFIG_PATH})
+	    cd $CONFIG_DIR
+	}
+	
+	
+|3,0,9,0,9,0,1617309279,"# Functions","configd() {","    [[ $# == 0 ]] && cd ~/.config && return","    CONFIG_PATH=$1_CONFIG","    CONFIG_DIR=$(dirname ${(P)CONFIG_PATH})","    cd $CONFIG_DIR","}","",""
 "a@	CHAR	0
 	eed4wbbPf(f(b
 |3,2,10,0,1,0,1616691904,"eed4wbbPf(f(b"
@@ -286,349 +341,605 @@ $
 "z	CHAR	0
 	QvisualkvisualQvisualZQ
 |3,0,35,0,1,0,1617207201,"QvisualkvisualQvisualZQ"
-""-	CHAR	0
+"-	CHAR	0
 	 
-|3,1,36,0,1,0,1617301224," "
+|3,0,36,0,1,0,1617309960," "
 
 # File marks:
-'0  26  0  ~/.gitignore
-|4,48,26,0,1617301301,"~/.gitignore"
-'1  30  28  ~/.config/zsh/.zshrc
-|4,49,30,28,1617301227,"~/.config/zsh/.zshrc"
-'2  4  0  ~/NERD_tree_1
-|4,50,4,0,1617301211,"~/NERD_tree_1"
-'3  1  0  ~/NERD_tree_1
-|4,51,1,0,1617301104,"~/NERD_tree_1"
-'4  1  0  ~/NERD_tree_1
-|4,52,1,0,1617301104,"~/NERD_tree_1"
-'5  1  0  ~/NERD_tree_1
-|4,53,1,0,1617301094,"~/NERD_tree_1"
-'6  1  0  ~/NERD_tree_1
-|4,54,1,0,1617301094,"~/NERD_tree_1"
-'7  3  0  ~/NERD_tree_1
-|4,55,3,0,1617301094,"~/NERD_tree_1"
-'8  4  0  ~/NERD_tree_1
-|4,56,4,0,1617301094,"~/NERD_tree_1"
-'9  1  0  ~/NERD_tree_1
-|4,57,1,0,1617301086,"~/NERD_tree_1"
+'0  3  0  ~/.zlogin
+|4,48,3,0,1617311232,"~/.zlogin"
+'1  3  0  ~/.local/bin/btc-price
+|4,49,3,0,1617310728,"~/.local/bin/btc-price"
+'2  63  0  ~/.gitignore
+|4,50,63,0,1617310013,"~/.gitignore"
+'3  1  40  ~/.zshenv
+|4,51,1,40,1617309960,"~/.zshenv"
+'4  1  0  ~/.config/zsh/.zlogin
+|4,52,1,0,1617309922,"~/.config/zsh/.zlogin"
+'5  1  0  ~/.config/zsh/.zlog
+|4,53,1,0,1617309917,"~/.config/zsh/.zlog"
+'6  1  0  ~/.config/zsh/.zshrc
+|4,54,1,0,1617309906,"~/.config/zsh/.zshrc"
+'7  3  0  ~/.config/zsh/.zshenv
+|4,55,3,0,1617309882,"~/.config/zsh/.zshenv"
+'8  1  18  ~/.config/zsh/.zlogout
+|4,56,1,18,1617309876,"~/.config/zsh/.zlogout"
+'9  1  0  ~/.config/zsh/.zlogin
+|4,57,1,0,1617309870,"~/.config/zsh/.zlogin"
 
 # Jumplist (newest first):
--'  26  0  ~/.gitignore
-|4,39,26,0,1617301301,"~/.gitignore"
+-'  3  0  ~/.zlogin
+|4,39,3,0,1617311232,"~/.zlogin"
+-'  1  0  ~/.zlogin
+|4,39,1,0,1617311231,"~/.zlogin"
+-'  3  0  ~/.local/bin/btc-price
+|4,39,3,0,1617310728,"~/.local/bin/btc-price"
+-'  1  0  ~/.local/bin/btc-price
+|4,39,1,0,1617310728,"~/.local/bin/btc-price"
+-'  3  0  ~/.local/bin/btc-price
+|4,39,3,0,1617310728,"~/.local/bin/btc-price"
+-'  1  0  ~/.local/bin/btc-price
+|4,39,1,0,1617310728,"~/.local/bin/btc-price"
+-'  63  0  ~/.gitignore
+|4,39,63,0,1617310013,"~/.gitignore"
+-'  63  0  ~/.gitignore
+|4,39,63,0,1617310013,"~/.gitignore"
+-'  63  0  ~/.gitignore
+|4,39,63,0,1617310013,"~/.gitignore"
+-'  63  0  ~/.gitignore
+|4,39,63,0,1617310013,"~/.gitignore"
+-'  3  0  ~/.gitignore
+|4,39,3,0,1617310010,"~/.gitignore"
+-'  3  0  ~/.gitignore
+|4,39,3,0,1617310010,"~/.gitignore"
+-'  3  0  ~/.gitignore
+|4,39,3,0,1617310010,"~/.gitignore"
+-'  3  0  ~/.gitignore
+|4,39,3,0,1617310010,"~/.gitignore"
 -'  1  0  ~/.gitignore
-|4,39,1,0,1617301297,"~/.gitignore"
--'  30  28  ~/.config/zsh/.zshrc
-|4,39,30,28,1617301227,"~/.config/zsh/.zshrc"
--'  30  28  ~/.config/zsh/.zshrc
-|4,39,30,28,1617301227,"~/.config/zsh/.zshrc"
+|4,39,1,0,1617310009,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1617310009,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1617310009,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1617310009,"~/.gitignore"
+-'  1  40  ~/.zshenv
+|4,39,1,40,1617309960,"~/.zshenv"
+-'  1  40  ~/.zshenv
+|4,39,1,40,1617309960,"~/.zshenv"
+-'  1  40  ~/.zshenv
+|4,39,1,40,1617309960,"~/.zshenv"
+-'  1  40  ~/.zshenv
+|4,39,1,40,1617309960,"~/.zshenv"
+-'  1  40  ~/.zshenv
+|4,39,1,40,1617309960,"~/.zshenv"
+-'  1  40  ~/.zshenv
+|4,39,1,40,1617309960,"~/.zshenv"
+-'  1  40  ~/.zshenv
+|4,39,1,40,1617309960,"~/.zshenv"
+-'  1  40  ~/.zshenv
+|4,39,1,40,1617309960,"~/.zshenv"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlogin
+|4,39,1,0,1617309922,"~/.config/zsh/.zlogin"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
+-'  1  0  ~/.config/zsh/.zlog
+|4,39,1,0,1617309917,"~/.config/zsh/.zlog"
 -'  1  0  ~/.config/zsh/.zshrc
-|4,39,1,0,1617301217,"~/.config/zsh/.zshrc"
+|4,39,1,0,1617309906,"~/.config/zsh/.zshrc"
+-'  75  0  ~/.config/zsh/.zshrc
+|4,39,75,0,1617309906,"~/.config/zsh/.zshrc"
 -'  1  0  ~/.config/zsh/.zshrc
-|4,39,1,0,1617301217,"~/.config/zsh/.zshrc"
--'  4  0  ~/NERD_tree_1
-|4,39,4,0,1617301211,"~/NERD_tree_1"
--'  7  0  ~/NERD_tree_1
-|4,39,7,0,1617301211,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301211,"~/NERD_tree_1"
--'  4  0  ~/NERD_tree_1
-|4,39,4,0,1617301211,"~/NERD_tree_1"
--'  7  0  ~/NERD_tree_1
-|4,39,7,0,1617301211,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301211,"~/NERD_tree_1"
--'  4  0  ~/NERD_tree_1
-|4,39,4,0,1617301211,"~/NERD_tree_1"
--'  7  0  ~/NERD_tree_1
-|4,39,7,0,1617301211,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301211,"~/NERD_tree_1"
--'  4  0  ~/NERD_tree_1
-|4,39,4,0,1617301211,"~/NERD_tree_1"
--'  7  0  ~/NERD_tree_1
-|4,39,7,0,1617301211,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301211,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301104,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301104,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301104,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301104,"~/NERD_tree_1"
--'  52  2  ~/NERD_tree_1
-|4,39,52,2,1617301103,"~/NERD_tree_1"
--'  52  2  ~/NERD_tree_1
-|4,39,52,2,1617301103,"~/NERD_tree_1"
--'  52  2  ~/NERD_tree_1
-|4,39,52,2,1617301103,"~/NERD_tree_1"
--'  52  2  ~/NERD_tree_1
-|4,39,52,2,1617301103,"~/NERD_tree_1"
--'  3  0  ~/NERD_tree_1
-|4,39,3,0,1617301094,"~/NERD_tree_1"
--'  4  0  ~/NERD_tree_1
-|4,39,4,0,1617301094,"~/NERD_tree_1"
--'  3  0  ~/NERD_tree_1
-|4,39,3,0,1617301094,"~/NERD_tree_1"
--'  4  0  ~/NERD_tree_1
-|4,39,4,0,1617301094,"~/NERD_tree_1"
--'  3  0  ~/NERD_tree_1
-|4,39,3,0,1617301094,"~/NERD_tree_1"
--'  4  0  ~/NERD_tree_1
-|4,39,4,0,1617301094,"~/NERD_tree_1"
--'  3  0  ~/NERD_tree_1
-|4,39,3,0,1617301094,"~/NERD_tree_1"
--'  4  0  ~/NERD_tree_1
-|4,39,4,0,1617301094,"~/NERD_tree_1"
--'  6  0  ~/NERD_tree_1
-|4,39,6,0,1617301092,"~/NERD_tree_1"
--'  7  0  ~/NERD_tree_1
-|4,39,7,0,1617301092,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301092,"~/NERD_tree_1"
--'  6  0  ~/NERD_tree_1
-|4,39,6,0,1617301092,"~/NERD_tree_1"
--'  7  0  ~/NERD_tree_1
-|4,39,7,0,1617301092,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301092,"~/NERD_tree_1"
--'  6  0  ~/NERD_tree_1
-|4,39,6,0,1617301092,"~/NERD_tree_1"
--'  7  0  ~/NERD_tree_1
-|4,39,7,0,1617301092,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301092,"~/NERD_tree_1"
--'  6  0  ~/NERD_tree_1
-|4,39,6,0,1617301092,"~/NERD_tree_1"
--'  7  0  ~/NERD_tree_1
-|4,39,7,0,1617301092,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301092,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301086,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301086,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301086,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301086,"~/NERD_tree_1"
--'  51  2  ~/NERD_tree_1
-|4,39,51,2,1617301083,"~/NERD_tree_1"
--'  2  0  ~/NERD_tree_1
-|4,39,2,0,1617301083,"~/NERD_tree_1"
--'  52  2  ~/NERD_tree_1
-|4,39,52,2,1617301083,"~/NERD_tree_1"
--'  3  0  ~/NERD_tree_1
-|4,39,3,0,1617301083,"~/NERD_tree_1"
--'  4  0  ~/NERD_tree_1
-|4,39,4,0,1617301083,"~/NERD_tree_1"
--'  51  2  ~/NERD_tree_1
-|4,39,51,2,1617301083,"~/NERD_tree_1"
--'  2  0  ~/NERD_tree_1
-|4,39,2,0,1617301083,"~/NERD_tree_1"
--'  52  2  ~/NERD_tree_1
-|4,39,52,2,1617301083,"~/NERD_tree_1"
--'  3  0  ~/NERD_tree_1
-|4,39,3,0,1617301083,"~/NERD_tree_1"
--'  4  0  ~/NERD_tree_1
-|4,39,4,0,1617301083,"~/NERD_tree_1"
--'  51  2  ~/NERD_tree_1
-|4,39,51,2,1617301083,"~/NERD_tree_1"
--'  2  0  ~/NERD_tree_1
-|4,39,2,0,1617301083,"~/NERD_tree_1"
--'  52  2  ~/NERD_tree_1
-|4,39,52,2,1617301083,"~/NERD_tree_1"
--'  3  0  ~/NERD_tree_1
-|4,39,3,0,1617301083,"~/NERD_tree_1"
--'  4  0  ~/NERD_tree_1
-|4,39,4,0,1617301083,"~/NERD_tree_1"
--'  51  2  ~/NERD_tree_1
-|4,39,51,2,1617301083,"~/NERD_tree_1"
--'  2  0  ~/NERD_tree_1
-|4,39,2,0,1617301083,"~/NERD_tree_1"
--'  52  2  ~/NERD_tree_1
-|4,39,52,2,1617301083,"~/NERD_tree_1"
--'  3  0  ~/NERD_tree_1
-|4,39,3,0,1617301083,"~/NERD_tree_1"
--'  4  0  ~/NERD_tree_1
-|4,39,4,0,1617301083,"~/NERD_tree_1"
--'  5  0  ~/NERD_tree_1
-|4,39,5,0,1617301076,"~/NERD_tree_1"
--'  6  0  ~/NERD_tree_1
-|4,39,6,0,1617301076,"~/NERD_tree_1"
--'  7  0  ~/NERD_tree_1
-|4,39,7,0,1617301076,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301076,"~/NERD_tree_1"
--'  5  0  ~/NERD_tree_1
-|4,39,5,0,1617301076,"~/NERD_tree_1"
--'  6  0  ~/NERD_tree_1
-|4,39,6,0,1617301076,"~/NERD_tree_1"
--'  7  0  ~/NERD_tree_1
-|4,39,7,0,1617301076,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301076,"~/NERD_tree_1"
--'  5  0  ~/NERD_tree_1
-|4,39,5,0,1617301076,"~/NERD_tree_1"
--'  6  0  ~/NERD_tree_1
-|4,39,6,0,1617301076,"~/NERD_tree_1"
--'  7  0  ~/NERD_tree_1
-|4,39,7,0,1617301076,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301076,"~/NERD_tree_1"
--'  5  0  ~/NERD_tree_1
-|4,39,5,0,1617301076,"~/NERD_tree_1"
--'  6  0  ~/NERD_tree_1
-|4,39,6,0,1617301076,"~/NERD_tree_1"
--'  7  0  ~/NERD_tree_1
-|4,39,7,0,1617301076,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301076,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301037,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301037,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301037,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1617301037,"~/NERD_tree_1"
--'  50  2  ~/NERD_tree_1
-|4,39,50,2,1617301036,"~/NERD_tree_1"
--'  51  2  ~/NERD_tree_1
-|4,39,51,2,1617301036,"~/NERD_tree_1"
--'  2  0  ~/NERD_tree_1
-|4,39,2,0,1617301036,"~/NERD_tree_1"
--'  52  2  ~/NERD_tree_1
-|4,39,52,2,1617301036,"~/NERD_tree_1"
--'  3  0  ~/NERD_tree_1
-|4,39,3,0,1617301036,"~/NERD_tree_1"
--'  4  0  ~/NERD_tree_1
-|4,39,4,0,1617301036,"~/NERD_tree_1"
--'  50  2  ~/NERD_tree_1
-|4,39,50,2,1617301036,"~/NERD_tree_1"
--'  51  2  ~/NERD_tree_1
-|4,39,51,2,1617301036,"~/NERD_tree_1"
--'  2  0  ~/NERD_tree_1
-|4,39,2,0,1617301036,"~/NERD_tree_1"
--'  52  2  ~/NERD_tree_1
-|4,39,52,2,1617301036,"~/NERD_tree_1"
+|4,39,1,0,1617309906,"~/.config/zsh/.zshrc"
+-'  75  0  ~/.config/zsh/.zshrc
+|4,39,75,0,1617309906,"~/.config/zsh/.zshrc"
+-'  1  0  ~/.config/zsh/.zshrc
+|4,39,1,0,1617309906,"~/.config/zsh/.zshrc"
+-'  75  0  ~/.config/zsh/.zshrc
+|4,39,75,0,1617309906,"~/.config/zsh/.zshrc"
+-'  1  0  ~/.config/zsh/.zshrc
+|4,39,1,0,1617309906,"~/.config/zsh/.zshrc"
+-'  75  0  ~/.config/zsh/.zshrc
+|4,39,75,0,1617309906,"~/.config/zsh/.zshrc"
+-'  1  0  ~/.config/zsh/.zshrc
+|4,39,1,0,1617309906,"~/.config/zsh/.zshrc"
+-'  75  0  ~/.config/zsh/.zshrc
+|4,39,75,0,1617309906,"~/.config/zsh/.zshrc"
+-'  1  0  ~/.config/zsh/.zshrc
+|4,39,1,0,1617309906,"~/.config/zsh/.zshrc"
+-'  75  0  ~/.config/zsh/.zshrc
+|4,39,75,0,1617309906,"~/.config/zsh/.zshrc"
+-'  1  0  ~/.config/zsh/.zshrc
+|4,39,1,0,1617309906,"~/.config/zsh/.zshrc"
+-'  75  0  ~/.config/zsh/.zshrc
+|4,39,75,0,1617309906,"~/.config/zsh/.zshrc"
+-'  1  0  ~/.config/zsh/.zshrc
+|4,39,1,0,1617309906,"~/.config/zsh/.zshrc"
+-'  75  0  ~/.config/zsh/.zshrc
+|4,39,75,0,1617309906,"~/.config/zsh/.zshrc"
+-'  1  0  ~/.config/zsh/.zshrc
+|4,39,1,0,1617309906,"~/.config/zsh/.zshrc"
+-'  75  0  ~/.config/zsh/.zshrc
+|4,39,75,0,1617309906,"~/.config/zsh/.zshrc"
+-'  1  0  ~/.config/zsh/.zshrc
+|4,39,1,0,1617309906,"~/.config/zsh/.zshrc"
+-'  75  0  ~/.config/zsh/.zshrc
+|4,39,75,0,1617309906,"~/.config/zsh/.zshrc"
+-'  1  0  ~/.config/zsh/.zshrc
+|4,39,1,0,1617309906,"~/.config/zsh/.zshrc"
+-'  75  0  ~/.config/zsh/.zshrc
+|4,39,75,0,1617309906,"~/.config/zsh/.zshrc"
+-'  1  0  ~/.config/zsh/.zshrc
+|4,39,1,0,1617309906,"~/.config/zsh/.zshrc"
+-'  75  0  ~/.config/zsh/.zshrc
+|4,39,75,0,1617309906,"~/.config/zsh/.zshrc"
+-'  1  0  ~/.config/zsh/.zshrc
+|4,39,1,0,1617309906,"~/.config/zsh/.zshrc"
+-'  75  0  ~/.config/zsh/.zshrc
+|4,39,75,0,1617309906,"~/.config/zsh/.zshrc"
 
 # History of marks within files (newest to oldest):
 
-> ~/.gitignore
-	*	1617301301	0
-	"	26	0
-	^	1	12
-	.	30	0
-	+	1	11
+> ~/.zlogin
+	*	1617311232	0
+	"	3	0
+
+> ~/.local/bin/btc-price
+	*	1617310728	0
+	"	3	0
+
+> ~/__Tagbar__.1
+	*	1617310727	0
+	"	1	0
+	.	4	0
+	+	60	0
+	+	58	0
+	+	56	0
+	+	54	0
+	+	52	0
+	+	50	0
+	+	48	0
+	+	46	0
+	+	44	0
+	+	42	0
+	+	40	0
+	+	38	0
+	+	36	0
+	+	34	0
+	+	32	0
 	+	30	0
+	+	28	0
+	+	26	0
+	+	24	0
+	+	22	0
+	+	20	0
+	+	18	0
+	+	16	0
+	+	14	0
+	+	12	0
+	+	10	0
+	+	8	0
+	+	6	0
+	+	4	0
+
+> ~/.gitignore
+	*	1617310012	0
+	"	63	0
+	^	1	12
+	.	64	0
+	+	1	11
+	+	28	0
+	+	13	0
+	+	15	0
+	+	64	0
+
+> ~/.zshenv
+	*	1617309960	0
+	"	1	40
+	^	1	41
+	.	1	40
+	+	1	40
+
+> ~/.config/zsh/.zlogin
+	*	1617309921	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/.config/zsh/.zlog
+	*	1617309916	0
+	"	1	0
 
 > ~/.config/zsh/.zshrc
-	*	1617301224	0
-	"	30	28
-	^	30	29
-	.	30	28
-	+	1	19
-	+	1	6
-	+	1	30
-	+	1	0
-	+	167	0
-	+	167	42
-	+	167	28
-	+	167	32
-	+	167	34
-	+	167	32
-	+	167	47
-	+	167	53
-	+	167	55
-	+	167	61
-	+	167	74
-	+	167	66
-	+	167	94
-	+	167	66
-	+	167	46
-	+	167	92
-	+	167	115
-	+	167	0
-	+	178	0
-	+	129	0
-	+	134	30
-	+	135	34
-	+	136	33
-	+	137	30
-	+	138	46
-	+	139	49
-	+	140	52
-	+	141	59
-	+	142	57
-	+	146	59
-	+	147	91
-	+	147	110
-	+	148	67
-	+	151	103
-	+	152	126
-	+	129	0
-	+	130	0
-	+	129	0
-	+	128	0
-	+	131	0
-	+	136	6
-	+	137	6
-	+	138	3
-	+	139	8
-	+	140	8
-	+	141	8
-	+	142	6
-	+	143	3
-	+	144	0
-	+	134	0
-	+	133	0
-	+	145	0
-	+	146	0
-	+	147	4
-	+	148	4
-	+	149	0
-	+	150	0
-	+	151	0
-	+	152	0
-	+	130	0
-	+	131	0
-	+	130	0
-	+	103	38
-	+	20	10
-	+	20	0
-	+	20	13
-	+	96	32
-	+	12	24
-	+	12	0
-	+	114	0
-	+	112	0
-	+	113	0
-	+	112	21
-	+	14	1
+	*	1617309906	0
+	"	1	0
+	.	79	0
+	+	51	32
+	+	51	34
+	+	51	32
+	+	51	47
+	+	51	53
+	+	51	55
+	+	51	61
+	+	51	74
+	+	51	66
+	+	51	94
+	+	51	66
+	+	51	46
+	+	51	92
+	+	51	115
+	+	51	0
+	+	62	0
+	+	13	0
+	+	18	30
+	+	19	34
+	+	20	33
+	+	21	30
+	+	22	46
+	+	23	49
+	+	24	52
+	+	25	59
+	+	26	57
+	+	30	59
+	+	31	91
+	+	31	110
+	+	32	67
+	+	35	103
+	+	36	126
+	+	13	0
 	+	14	0
-	+	16	52
-	+	25	18
-	+	26	0
-	+	90	43
-	+	93	57
-	+	64	55
-	+	103	12
-	+	103	0
-	+	102	18
-	+	102	37
-	+	103	0
-	+	175	15
-	+	176	15
-	+	194	0
-	+	177	5
-	+	176	0
-	+	188	5
-	+	195	7
-	+	5	31
-	+	24	21
-	+	30	28
+	+	13	0
+	+	12	0
+	+	15	0
+	+	20	6
+	+	21	6
+	+	22	3
+	+	23	8
+	+	24	8
+	+	25	8
+	+	26	6
+	+	27	3
+	+	28	0
+	+	18	0
+	+	17	0
+	+	29	0
+	+	30	0
+	+	31	4
+	+	32	4
+	+	33	0
+	+	34	0
+	+	35	0
+	+	36	0
+	+	14	0
+	+	15	0
+	+	14	0
+	+	1	38
+	+	1	10
+	+	1	0
+	+	1	13
+	+	1	32
+	+	1	24
+	+	1	0
+	+	1	21
+	+	1	1
+	+	1	0
+	+	1	52
+	+	1	18
+	+	1	0
+	+	1	43
+	+	1	57
+	+	1	55
+	+	1	12
+	+	1	0
+	+	1	18
+	+	1	37
+	+	1	0
+	+	59	15
+	+	60	15
+	+	78	0
+	+	61	5
+	+	60	0
+	+	72	5
+	+	79	7
+	+	1	31
+	+	1	21
+	+	1	28
+	+	1	0
+	+	1	25
+	+	1	0
+	+	2	0
+	+	79	0
+
+> ~/.config/zsh/.zshenv
+	*	1617309882	0
+	"	3	0
+
+> ~/.config/zsh/.zlogout
+	*	1617309875	0
+	"	1	18
+	^	1	19
+	.	1	18
+	+	1	18
+
+> ~/.config/zsh/.zprofile
+	*	1617309747	0
+	"	1	0
+
+> ~/.config/zsh/.zsh
+	*	1617309508	0
+	"	1	0
+
+> ~/.config/zsh/environmentrc
+	*	1617309502	0
+	"	47	0
+
+> ~/.config/zsh/environment
+	*	1617309476	0
+	"	50	0
+	.	1	0
+	+	1	0
+
+> ~/.config/vim/colours.vim
+	*	1617309193	0
+	"	15	0
+	^	13	1
+	.	1	0
+	+	1	1
+	+	12	0
+	+	13	1
+	+	9	0
+	+	1	0
+
+> ~/.config/vim/init.vim
+	*	1617309144	0
+	"	5	0
+	^	5	20
+	.	6	0
+	+	1	0
+	+	11	0
+	+	8	0
+	+	9	19
+	+	11	0
+	+	1	0
+	+	11	0
+	+	1	0
+	+	11	0
+	+	11	18
+	+	11	14
+	+	11	0
+	+	11	54
+	+	10	33
+	+	11	0
+	+	6	10
+	+	8	0
+	+	7	7
+	+	10	7
+	+	7	11
+	+	11	0
+	+	5	0
+	+	4	0
+	+	6	0
+	+	11	0
+	+	5	19
+	+	6	0
+
+> ~/.local/bin/config
+	*	1617309119	0
+	"	3	38
+	^	3	41
+	.	3	38
+	+	3	31
+	+	5	0
+	+	3	0
+	+	4	0
+	+	3	38
+
+> ~/.local/bin/script
+	*	1617308847	0
+	"	1	0
+
+> ~/typescript
+	*	1617308734	0
+	"	111	0
+
+> /usr/bin/script
+	*	1617308658	0
+	"	1	0
+
+> ~/.local/bin/edit
+	*	1617303779	0
+	"	2	0
+	^	5	4
+	.	2	0
+	+	11	68
+	+	11	0
+	+	11	85
+	+	11	0
+	+	11	82
+	+	11	0
+	+	2	0
+	+	11	0
+	+	11	14
+	+	11	15
+	+	11	0
+	+	2	0
+	+	3	17
+	+	3	22
+	+	10	2
+	+	11	15
+	+	6	5
+	+	9	0
+	+	10	0
+	+	2	0
+	+	7	4
+	+	2	0
+	+	8	3
+	+	11	0
+	+	4	35
+	+	5	13
+	+	2	0
+
+> ~/.config/vim/autocmds/__Tagbar__.1
+	*	1617303777	0
+	"	1	0
+	.	4	0
+	+	8	0
+	+	6	0
+	+	4	0
+
+> ~/.config/vim/autocmds/code.vim
+	*	1617303209	0
+	"	2	0
+	^	4	44
+	.	2	0
+	+	2	53
+	+	2	0
+	+	4	0
+	+	2	0
+	+	3	0
+	+	1	26
+	+	3	10
+	+	4	45
+	+	2	22
+	+	2	23
+	+	4	23
+	+	2	34
+	+	4	34
+	+	2	38
+	+	4	48
+	+	2	50
+	+	2	52
+	+	4	43
+	+	2	0
+
+> ~/.config/vim/autocmd
+	*	1617303199	0
+	"	1	0
+
+> ~/NERD_tree_1
+	*	1617303189	0
+	"	4	0
+	.	1	0
+	+	1	0
+
+> ~/.local/bin/project
+	*	1617303085	0
+	"	1	0
+
+> ~/repos/NERD_tree_1
+	*	1617302978	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/repos/.todo.org
+	*	1617302959	0
+	"	9	62
+	.	9	64
+	+	4	8
+	+	1	9
+	+	2	15
+	+	5	9
+	+	7	0
+	+	4	0
+	+	7	0
+	+	4	0
+	+	7	0
+	+	1	9
+	+	5	0
+	+	9	102
+	+	9	64
 
 > ~/.local/bin/git-ignore
 	*	1617301211	0
@@ -690,51 +1001,9 @@ $
 	+	10	18
 	+	11	6
 
-> ~/NERD_tree_1
-	*	1617301122	0
-	"	4	0
-	.	1	0
-	+	1	0
-
-> ~/__Tagbar__.1
-	*	1617301122	0
-	"	1	0
-	.	4	0
-	+	40	0
-	+	38	0
-	+	36	0
-	+	34	0
-	+	32	0
-	+	30	0
-	+	28	0
-	+	26	0
-	+	24	0
-	+	22	0
-	+	20	0
-	+	18	0
-	+	16	0
-	+	14	0
-	+	12	0
-	+	10	0
-	+	8	0
-	+	6	0
-	+	4	0
-
 > ~/.local/bin/xroot-panels/ip-status
 	*	1617301092	0
 	"	3	0
-
-> ~/.local/bin/edit
-	*	1617301076	0
-	"	7	0
-	^	8	0
-	.	8	0
-	+	5	68
-	+	9	0
-	+	7	85
-	+	9	0
-	+	7	82
-	+	8	0
 
 > ~/repos/xroot-status/bin/NERD_tree_1
 	*	1617300411	0
@@ -1108,32 +1377,6 @@ $
 	*	1617214836	0
 	"	1	0
 
-> ~/.config/vim/autocmds/code.vim
-	*	1617214504	0
-	"	5	38
-	^	5	44
-	.	5	43
-	+	2	53
-	+	3	0
-	+	5	0
-	+	3	0
-	+	4	0
-	+	1	26
-	+	4	10
-	+	5	45
-	+	2	22
-	+	3	23
-	+	5	23
-	+	2	34
-	+	3	34
-	+	5	34
-	+	2	38
-	+	3	38
-	+	5	48
-	+	3	50
-	+	2	52
-	+	5	43
-
 > ~/.config/vim/test.py
 	*	1617214498	0
 	"	1	0
@@ -1169,10 +1412,6 @@ $
 	+	9	13
 	+	10	14
 
-> ~/.config/vim/autocmd
-	*	1617214197	0
-	"	1	0
-
 > ~/.config/vim/py.py
 	*	1617210143	0
 	"	1	0
@@ -1186,44 +1425,6 @@ $
 	"	4	0
 	.	1	0
 	+	1	0
-
-> ~/.config/vim/autocmds/__Tagbar__.1
-	*	1617209999	0
-	"	1	0
-	.	4	0
-	+	4	0
-
-> ~/.config/vim/init.vim
-	*	1617209723	0
-	"	10	0
-	^	13	20
-	.	13	19
-	+	1	0
-	+	19	0
-	+	16	0
-	+	17	19
-	+	19	0
-	+	1	0
-	+	19	0
-	+	1	0
-	+	19	0
-	+	19	18
-	+	19	14
-	+	19	0
-	+	19	54
-	+	18	33
-	+	19	0
-	+	14	10
-	+	16	0
-	+	15	7
-	+	18	7
-	+	15	11
-	+	19	0
-	+	5	0
-	+	4	0
-	+	14	0
-	+	19	0
-	+	13	19
 
 > ~/.config/vim/viminfo
 	*	1617209596	0
@@ -1383,22 +1584,6 @@ $
 	.	2	0
 	+	3	26
 	+	2	0
-
-> ~/repos/.todo.org
-	*	1617207232	0
-	"	6	0
-	^	7	0
-	.	1	9
-	+	4	8
-	+	1	9
-	+	2	15
-	+	5	9
-	+	7	0
-	+	4	0
-	+	7	0
-	+	4	0
-	+	7	0
-	+	1	9
 
 > ~/.config/vim/bundle/vim-orgmode/doc/orgguide.txt
 	*	1617207201	0
@@ -1598,501 +1783,3 @@ $
 	"	1	0
 	.	1	0
 	+	1	0
-
-> ~/repos/gna-practicum1/report/TOOD
-	*	1617167586	0
-	"	1	0
-	.	1	0
-	+	1	0
-
-> ~/repos/gna-practicum1/report/sections/inleiding.tex
-	*	1617158262	0
-	"	1	0
-	^	3	196
-	.	3	207
-	+	1	10
-	+	1	0
-	+	1	10
-	+	1	98
-	+	1	0
-	+	1	211
-	+	1	0
-	+	1	335
-	+	1	333
-	+	1	0
-	+	3	178
-	+	3	423
-	+	3	140
-	+	3	193
-	+	3	0
-	+	3	207
-
-> ~/repos/gna-practicum1/report/sections/definities.tex
-	*	1617157173	0
-	"	13	58
-	^	13	59
-	.	13	58
-	+	1	19
-	+	1	17
-	+	1	4
-	+	1	0
-	+	1	48
-	+	1	1
-	+	1	38
-	+	1	100
-	+	1	221
-	+	1	0
-	+	11	11
-	+	9	48
-	+	11	49
-	+	3	49
-	+	13	0
-	+	14	0
-	+	13	58
-
-> ~/repos/gna-practicum1/report/sections/ControlP
-	*	1617157126	0
-	"	1	0
-	.	1	0
-	+	1	0
-
-> ~/repos/gna-practicum1/report/sections/insertionsort.tex
-	*	1617157123	0
-	"	1	0
-	.	1	0
-	+	1	22
-	+	1	0
-	+	1	30
-	+	1	0
-	+	1	37
-	+	1	0
-	+	1	7
-	+	1	25
-	+	1	26
-	+	1	25
-	+	1	26
-	+	1	25
-	+	1	27
-	+	1	25
-	+	1	20
-	+	1	0
-	+	1	26
-	+	1	55
-	+	1	15
-	+	1	75
-	+	1	0
-	+	1	102
-	+	1	0
-	+	1	134
-	+	1	135
-	+	1	141
-	+	1	0
-	+	1	136
-	+	1	157
-	+	1	0
-	+	1	65
-	+	1	137
-	+	1	0
-	+	1	141
-	+	1	116
-	+	1	174
-	+	1	180
-	+	1	218
-	+	1	141
-	+	1	117
-	+	1	0
-	+	1	90
-	+	1	35
-	+	1	0
-	+	1	81
-	+	1	0
-	+	1	134
-	+	1	136
-	+	1	201
-	+	1	0
-	+	1	141
-	+	1	0
-	+	1	257
-	+	1	272
-	+	1	0
-	+	1	331
-	+	1	0
-
-> ~/repos/gna-practicum1/report/sections/quicksort.tex
-	*	1617156919	0
-	"	6	0
-	^	25	404
-	.	25	403
-	+	1	17
-	+	1	43
-	+	1	56
-	+	1	32
-	+	1	0
-	+	1	224
-	+	1	231
-	+	1	310
-	+	1	0
-	+	1	66
-	+	1	207
-	+	1	0
-	+	1	276
-	+	1	278
-	+	1	277
-	+	1	282
-	+	1	385
-	+	1	392
-	+	1	0
-	+	1	62
-	+	1	0
-	+	1	7
-	+	1	108
-	+	1	0
-	+	1	115
-	+	1	117
-	+	1	126
-	+	1	170
-	+	1	172
-	+	1	170
-	+	1	283
-	+	1	0
-	+	25	283
-	+	25	286
-	+	25	294
-	+	25	311
-	+	25	403
-
-> ~/repos/gna-practicum1/report/sections/tables/insertionsort_doubling_ratio_metingen.tex
-	*	1617154518	0
-	"	1	6
-	^	7	14
-	.	5	0
-	+	20	0
-	+	20	29
-	+	20	7
-	+	20	29
-	+	20	33
-	+	20	31
-	+	20	13
-	+	20	0
-	+	20	28
-	+	20	19
-	+	20	23
-	+	20	17
-	+	20	18
-	+	20	27
-	+	20	26
-	+	20	25
-	+	20	24
-	+	20	36
-	+	20	27
-	+	20	30
-	+	20	32
-	+	20	33
-	+	20	34
-	+	20	35
-	+	20	29
-	+	20	28
-	+	20	25
-	+	20	16
-	+	20	30
-	+	20	55
-	+	20	0
-	+	20	23
-	+	20	26
-	+	20	25
-	+	20	26
-	+	20	14
-	+	20	13
-	+	20	11
-	+	20	0
-	+	20	14
-	+	20	0
-	+	20	34
-	+	20	14
-	+	20	0
-	+	4	0
-	+	20	10
-	+	3	3
-	+	3	7
-	+	6	0
-	+	17	7
-	+	20	3
-	+	3	0
-	+	20	0
-	+	3	0
-	+	18	0
-	+	20	0
-	+	1	0
-	+	2	17
-	+	1	15
-	+	19	0
-	+	2	0
-	+	4	0
-	+	1	16
-	+	6	0
-	+	8	0
-	+	10	0
-	+	12	0
-	+	14	0
-	+	16	0
-	+	7	13
-	+	9	0
-	+	11	0
-	+	13	0
-	+	15	0
-	+	5	0
-
-> ~/repos/gna-practicum1/report/sections/tables/quicksort_doubling_ratio_voorspelling.tex
-	*	1617154487	0
-	"	9	8
-	^	5	14
-	.	9	0
-	+	2	87
-	+	3	52
-	+	6	55
-	+	3	54
-	+	4	54
-	+	6	49
-	+	4	47
-	+	3	37
-	+	4	37
-	+	6	31
-	+	4	31
-	+	3	21
-	+	4	21
-	+	6	21
-	+	4	21
-	+	3	21
-	+	4	0
-	+	6	0
-	+	3	0
-	+	6	17
-	+	4	17
-	+	3	28
-	+	4	28
-	+	6	49
-	+	4	47
-	+	3	46
-	+	1	15
-	+	8	10
-	+	6	49
-	+	1	0
-	+	2	0
-	+	3	0
-	+	4	0
-	+	6	0
-	+	8	0
-	+	10	0
-	+	11	0
-	+	12	0
-	+	13	0
-	+	1	16
-	+	5	13
-	+	7	0
-	+	9	0
-
-> ~/repos/gna-practicum1/report/sections/tables/quicksort_doubling_ratio_metingen.tex
-	*	1617154458	0
-	"	1	15
-	^	15	14
-	.	1	16
-	+	10	0
-	+	10	4
-	+	3	33
-	+	8	31
-	+	3	0
-	+	4	0
-	+	6	0
-	+	8	0
-	+	3	0
-	+	3	16
-	+	4	14
-	+	6	14
-	+	8	15
-	+	4	15
-	+	6	15
-	+	8	16
-	+	8	17
-	+	3	22
-	+	4	22
-	+	6	22
-	+	8	24
-	+	8	32
-	+	8	30
-	+	6	28
-	+	4	28
-	+	3	23
-	+	4	23
-	+	6	23
-	+	8	25
-	+	3	0
-	+	1	15
-	+	10	10
-	+	10	50
-	+	1	13
-	+	10	10
-	+	1	0
-	+	2	0
-	+	3	0
-	+	4	0
-	+	6	0
-	+	8	0
-	+	10	0
-	+	12	0
-	+	14	0
-	+	15	0
-	+	16	0
-	+	17	0
-	+	18	0
-	+	19	0
-	+	15	13
-	+	14	0
-	+	12	0
-	+	10	0
-	+	8	0
-	+	6	0
-	+	13	0
-	+	11	0
-	+	9	0
-	+	7	0
-	+	8	0
-	+	5	0
-	+	1	16
-
-> ~/repos/gna-practicum1/report/sections/tables/quicksort_doubling_ratio_
-	*	1617154395	0
-	"	1	0
-
-> ~/repos/gna-practicum1/report/sections/tables/insertionsort_doubling_ratio_voorspelling.tex
-	*	1617154388	0
-	"	9	8
-	^	5	17
-	.	5	0
-	+	2	34
-	+	7	0
-	+	6	4
-	+	5	55
-	+	3	58
-	+	4	58
-	+	5	58
-	+	3	18
-	+	4	18
-	+	5	32
-	+	4	29
-	+	3	29
-	+	4	29
-	+	3	37
-	+	4	36
-	+	5	50
-	+	4	47
-	+	3	47
-	+	4	0
-	+	5	0
-	+	3	0
-	+	5	15
-	+	4	14
-	+	3	0
-	+	2	81
-	+	2	82
-	+	2	83
-	+	2	87
-	+	3	27
-	+	4	27
-	+	5	51
-	+	4	48
-	+	3	48
-	+	1	15
-	+	7	11
-	+	6	53
-	+	1	0
-	+	2	0
-	+	3	0
-	+	4	0
-	+	5	0
-	+	6	0
-	+	7	0
-	+	8	0
-	+	9	0
-	+	10	0
-	+	11	0
-	+	12	0
-	+	13	0
-	+	9	11
-	+	7	11
-	+	5	16
-	+	1	14
-	+	5	0
-
-> ~/repos/gna-practicum1/report/sections/tables/insertionsort_doubling_ratio_
-	*	1617154086	0
-	"	1	0
-
-> ~/repos/gna-practicum1/report/sections/selectionsort.tex
-	*	1617154055	0
-	"	1	0
-	^	9	216
-	.	9	215
-	+	1	0
-	+	1	22
-	+	1	0
-	+	1	43
-	+	1	0
-	+	1	21
-	+	1	133
-	+	1	269
-	+	1	0
-	+	1	66
-	+	1	0
-	+	1	1
-	+	1	0
-	+	1	67
-	+	1	0
-	+	1	122
-	+	1	184
-	+	1	0
-	+	1	256
-	+	1	342
-	+	1	0
-	+	9	215
-
-> ~/repos/gna-practicum1/report/sections/onderzoeksmethode.tex
-	*	1617146915	0
-	"	7	200
-	.	1	0
-	+	1	25
-	+	1	0
-	+	1	348
-	+	1	157
-	+	1	0
-
-> /tmp/tmpo9vi0_g6
-	*	1617124702	0
-	"	1	0
-
-> /tmp/tmpyd2i6pwv
-	*	1617124700	0
-	"	18	0
-	^	1	5
-	.	3	0
-	+	2	0
-	+	1	0
-	+	14	0
-	+	8	0
-	+	2	0
-	+	5	0
-	+	7	0
-	+	10	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	3	0
-
-> ~/repos/gna-practicum1/report/sections/NERD_tree_1
-	*	1617124157	0
-	"	4	0
-	.	1	0
-	+	1	0
-
-> ~/repos/gna-practicum1/report/sections/__Tagbar__.2
-	*	1617124155	0
-	"	1	0

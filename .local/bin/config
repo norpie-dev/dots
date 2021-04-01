@@ -1,7 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 
-[[ $# == 0 ]] && echo "more arguments needed" && exit 0
-
-CONFIG_PATH=$1_CONFIG
-
-vim "${!CONFIG_PATH}"
+file=$(find $XDG_CONFIG_HOME -maxdepth 3 | fzf) 
+vim $file

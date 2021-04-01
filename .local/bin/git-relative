@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[[ $# == 0 ]] && echo "1 or more arguments needed" && exit 1
+
+git rev-parse --show-prefix $1 | awk 'NR%2{printf "%s",$0;next;}1'

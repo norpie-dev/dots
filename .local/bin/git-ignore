@@ -2,7 +2,16 @@
 
 [[ $# == 0 ]] && echo "1 or more arguments needed" && exit 1
 
+dots=false
+
 for arg in "$@"
 do
-    echo $arg >> .gitignore
+    if [[ $arg == "--dots" ]]; then 
+        dots=true 
+    fi 
+    if $dots; then
+        echo `dots relative $arg` >> `git root`/.gitignore
+    else
+        echo `git relative $arg` >> `git root`/.gitignore
+    fi 
 done

@@ -26,6 +26,10 @@ Plugin 'junegunn/goyo.vim'
 " Colorschemes
 Plugin 'flazz/vim-colorschemes'
 
+" Utilities
+Plugin 'jceb/vim-orgmode'
+Plugin 'tpope/vim-speeddating'
+
 " General Improvements
 Plugin 'mbbill/undotree'
 
@@ -54,9 +58,11 @@ let g:ale_linters = {
 \   'yaml': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
+let g:ale_completion_autoimport = 1
+
 
 "" YCM Configuration
 let g:ycm_global_ycm_extra_conf = '/home/konsta/config/vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
-let g:ycm_min_num_of_chars_for_completion = 4
-let g:ycm_min_num_identifier_candidate_chars = 4
+let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_min_num_identifier_candidate_chars = 1
 let g:ycm_enable_diagnostic_highlighting = 0

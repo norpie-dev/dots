@@ -2,6 +2,8 @@
 
 SCRIPT_PATH="$HOME/.local/bin/$1"
 
-[ ! -f $SCRIPT_PATH ] && echo '#!/bin/sh' > $SCRIPT_PATH && chmod +x $SCRIPT_PATH
+[ $# == 0 ] && file=$(find $SCRIPT_DIR | fzf) && vim $file && exit 0
+
+[ ! -f $SCRIPT_PATH ] && echo '#!/bin/sh' > $SCRIPT_PATH && chmod +x $SCRIPT_PATH 
 
 vim $SCRIPT_PATH

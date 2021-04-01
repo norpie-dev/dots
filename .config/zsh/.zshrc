@@ -2,7 +2,7 @@
 alias vi=vim
 alias pulseaudio-start="pulseaudio --exit-idle-time=-1 --daemonize -vv"
 alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
-alias cleart="clear && pfetch"
+alias cleart="clear && neofetch"
 alias workspace='vim +split +"wincmd j" +term +"wincmd j" +q +"resize -15" +NERDTreeToggle' # Vim IDE thingy
 alias node80="sudo node app.js"
 alias shutdown="sudo shutdown -h now"
@@ -21,12 +21,13 @@ alias gi="git ignore"
 
 # Dot aliases
 alias dots="git --git-dir=$HOME/.dots --work-tree=$HOME"
-alias ds="dots status -uno"
+alias ds="dots status"
 alias dl="dots log --oneline --decorate --all --graph"
 alias dc="dots commit"
 alias da="dots add"
 alias dr="dots rm"
 alias dp="dots push"
+alias di="dots ignore --dots"
 
 # Colors
 alias ls="ls -ovH --color=auto --group-directories-first"
@@ -99,6 +100,8 @@ export SCRIPT_DIR="$HOME/.local/bin"
 # Moving dot dirs to .config
 export VIMINIT="source ~/.config/vim/init.vim"
 export VIMDOTDIR="source ~/.config/vim"
+export VIMDIR="~/.config/vim"
+#export VIM="~/.config/vim"
 export GNUPGHOME="~/.config/gnupg"
 export __GL_SHADER_DISK_CACHE_PATH="~/.config/nvidia"
 #export XAUTHORITY="~/.config/X11/Xauthority"
@@ -169,6 +172,10 @@ precmd() {
     }
 }
 
+eval `ssh-agent`
+ssh-add-defaults
+clear
+
 # Auto-complete
 autoload -U compinit
 setopt autocd
@@ -178,9 +185,11 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
+clear
 
 # fast-syntax-highlighting theme
 fast-theme zdharma
 
 # start commmands
 clear
+neofetch

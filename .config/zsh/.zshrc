@@ -1,5 +1,5 @@
 # Abstraction
-source ~/.config/zsh/environment
+source ~/.config/zsh/functions.sh 
 
 # Plugins
 source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh

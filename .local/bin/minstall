@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/zsh
 
 [[ $# == 0 ]] && echo "more arguments needed" && exit 0
 

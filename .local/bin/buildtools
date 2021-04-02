@@ -1,3 +1,3 @@
-#!/bin/sh
+#!/usr/bin/zsh
 
 java -jar ~/repos/buildtools/BuildTools.jar --rev latest --compile spigot --generate-docs --generate-source -o ~/repos/buildtools/jars

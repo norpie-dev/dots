@@ -22,13 +22,13 @@ set undodir=~/.config/vim/undodir
 set undofile
 set incsearch
 set termguicolors
-set scrolloff=8
+set scrolloff=12
 set noshowmode
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
 set cmdheight=2
 set updatetime=50
-set viminfo+=n~/.config/vim/viminfo
+set viminfo+=n~/.cache/vim/viminfo
 set runtimepath+=~/.config/vim
 set omnifunc=syntaxcomplete#Complete
 set ruler

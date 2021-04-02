@@ -61,3 +61,6 @@ uni
 .config/gh
 .config/gnupg
 .config/ssh
+.config/zsh/.zcompdump
+.config/vim/sets.vim
+.config/vim/viminfo

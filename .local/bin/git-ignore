@@ -1,16 +1,16 @@
-#!/bin/sh
+#!/usr/bin/zsh
 
 [[ $# == 0 ]] && echo "1 or more arguments needed" && exit 1
 
-dots=false
+dot=false
 
 for arg in "$@"
 do
     if [[ $arg == "--dots" ]]; then 
-        dots=true 
+        dot=true 
     fi 
-    if $dots; then
-        echo `dots relative $arg` >> `git root`/.gitignore
+    if $dot; then
+        echo `dots relative $arg` >> `dots root`/.gitignore
     else
         echo `git relative $arg` >> `git root`/.gitignore
     fi 

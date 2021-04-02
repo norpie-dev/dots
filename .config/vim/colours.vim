@@ -10,6 +10,13 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 colorscheme molokai 
 set background=dark
 
+" Transparency 
+hi Normal guibg=NONE ctermbg=NONE
+" transparent bg
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+" For Vim<8, replace EndOfBuffer by NonText
+autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
+
 " Lightline Configuration
 set laststatus=2
 set noshowmode

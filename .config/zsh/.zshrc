@@ -1,4 +1,5 @@
 # Abstraction
+source ~/.config/zsh/environment.sh
 source ~/.config/zsh/functions.sh 
 
 # Plugins

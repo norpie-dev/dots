@@ -8,6 +8,7 @@ for arg in "$@"
 do
     if [[ $arg == "--dots" ]]; then 
         dot=true 
+        continue
     fi 
     if $dot; then
         echo `dots relative $arg` >> `dots root`/.gitignore

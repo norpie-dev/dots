@@ -18,7 +18,7 @@ set smartcase
 set encoding=utf-8
 set noswapfile
 set nobackup
-set undodir=~/.config/vim/undodir
+set undodir=~/.cache/vim/undodir
 set undofile
 set incsearch
 set termguicolors

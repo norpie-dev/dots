@@ -7,5 +7,5 @@ start-ckb-next-daemon
 xroot-status-restart
 sudo plex
 pulseaudio -D --exit-idle-time=-1
-wallpaper 
+xwallpaper --zoom ~/.config/wallpaper/wallpaper.png
 escapecaps

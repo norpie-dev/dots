@@ -9,3 +9,4 @@ autocmd! BufWritePost *.vim source %
 source $VIMDIR/cmd/coding.vim
 source $VIMDIR/cmd/scripting.vim
 source $VIMDIR/cmd/writing.vim
+source $VIMDIR/cmd/compiling.vim 

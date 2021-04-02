@@ -1,26 +1,6 @@
-#!/bin/sh
+#!/bin/zsh
 
-usage="Usage: wallpaper [filename]"
-
-apply_default_wallpaper() {
-    xwallpaper --zoom $HOME/.config/wallpaper/wallpaper.png
-}
-
-set_default_wallpaper() {
-   rm "$HOME/.config/wallpaper/wallpaper.png"
-   cp "$HOME/.config/wallpaper/selection/$1.png" "$HOME/.config/wallpaper/wallpaper.png"
-}
-
-list_all_files() {
-    files=$(ls $HOME/.config/wallpaper/selection)
-    for file in $files; do
-        echo $file
-    done
-}
-
-[ $# != 1 ] && apply_default_wallpaper && echo "$usage" && list_all_files && exit 1
-
-[ ! -f "$HOME/.config/wallpaper/selection/$1.png" ] && echo 'not exists' && apply_default_wallpaper && exit 1
-
-set_default_wallpaper $1
-apply_default_wallpaper
+selection=$(find ~/.config/wallpaper -name "*.png" | fzf-img)
+[[ $selection == "" ]] && exit 1 
+cp $selection ~/.config/wallpaper/wallpaper.png
+xwallpaper --zoom ~/.config/wallpaper/wallpaper.png

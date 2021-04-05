@@ -65,3 +65,4 @@ uni
 .config/vim/sets.vim
 .config/vim/viminfo
 .config/X11/Xauthority
+.config/vim/plugged

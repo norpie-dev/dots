@@ -1,3 +1,15 @@
-#!/bin/sh
+#!/bin/zsh
 
-vim ~/repos/.todo.org
+function open_todo() {
+    vim $TODO_DIRECTORY/$1.dotoo
+}
+
+function open_menu() {
+    echo "Not implemented yet!"
+}
+
+if [[ $# -eq 1 ]]; then
+    open_todo $1
+else
+    open_menu
+fi 

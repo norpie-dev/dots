@@ -2,6 +2,6 @@
 
 [[ $# == 0 ]] && echo "Usage: git sremote 'user/repo'" && exit 1
 
-git branch -M main 
-git remote add origin git@github.com:$1.git
-git push -u origin main 
+git dir && git branch -M main 
+git dir && git remote add origin git@github.com:$1.git
+git dir && git push -u origin main 

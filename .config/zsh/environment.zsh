@@ -1,10 +1,10 @@
 # Custom Commands
-alias v=vim
-alias vi=vim
+alias vim="vim -p"
+alias v="vim"
+alias vi="vim"
 alias pulseaudio-start="pulseaudio --exit-idle-time=-1 --daemonize -vv"
-alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
+alias wget="wget --hsts-file $HOME/.config/wget/wget-hsts"
 alias cleart="clear && neofetch"
-alias workspace='vim +split +"wincmd j" +term +"wincmd j" +q +"resize -15" +NERDTreeToggle' # Vim IDE thingy
 alias node80="sudo node app.js"
 alias shutdown="sudo shutdown -h now"
 alias reboot="sudo reboot"
@@ -42,17 +42,16 @@ alias mkdir="mkdir -p"
 alias mv="mv -v"
 alias cp="cp -v"
 
+# Define home
+export HOME="/home/konsta"
+
 # Exports
-export PATH=~/.local/bin:~/.local/bin/xroot-panels:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/bin/xroot-panels:$PATH
 
-#XDG
-export XDG_CONFIG_HOME=~/.config
-export XDG_CACHE_HOME=~/.cache
-export XDG_DATA_HOME=~/.local/share
-
-#Prompt
-export NEWLINE=$'\n'
-export PROMPT="%F{27}%B%n%b %F{15}on %F{27}%B%m%b %F{15}in %F{27}%B%~%b ${NEWLINE}%F{15}%T %F{27}%B<>%b %F{15}"
+# XDG
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
 
 # Locale
 export LANG="en_NZ.UTF-8"
@@ -66,17 +65,19 @@ export VISUAL="vim"
 
 # Config paths
 export SCRIPT_DIR="$HOME/.local/bin"
+export REPO_DIRECTORY="$HOME/repos"
+export TODO_DIRECTORY="$REPO_DIRECTORY/todo"
 
 # Moving dot dirs to .config
-export VIMINIT="source ~/.config/vim/init.vim"
-export VIMDOTDIR="source ~/.config/vim"
-export VIMDIR="~/.config/vim"
-export GNUPGHOME="~/.config/gnupg"
-export __GL_SHADER_DISK_CACHE_PATH="~/.config/nvidia"
-#export XAUTHORITY="~/.config/X11/Xauthority"
-export CARGO_HOME="~/.local/share/cargo"
-export NVM_DIR="~/.config/nvm"
-alias ssh="ssh -F ~/.config/ssh/config -o UserKnownHostsFile=~/.config/ssh/known_hosts"
+export VIMINIT="source $HOME/.config/vim/init.vim"
+export VIMDOTDIR="source $HOME/.config/vim"
+export VIMDIR="$HOME/.config/vim"
+export GNUPGHOME="$HOME/.config/gnupg"
+export __GL_SHADER_DISK_CACHE_PATH="$HOME/.config/nvidia"
+#export XAUTHORITY="$HOME/.config/X11/Xauthority"
+export CARGO_HOME="$HOME/.local/share/cargo"
+export NVM_DIR="$HOME/.config/nvm"
+alias ssh="ssh -F $HOME/.config/ssh/config -o UserKnownHostsFile=$HOME/.config/ssh/known_hosts"
 export LEIN_HOME="$XDG_DATA_HOME"/lein
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"

@@ -1,39 +1,40 @@
 filetype off
-set rtp+=~/.config/vim/bundle/Vundle.vim
-call vundle#begin('~/.config/vim/bundle')
+set rtp+=~/.config/vim
+call plug#begin('~/.config/vim/plugged')
 
 " Plugin Manager
-Plugin 'VundleVim/Vundle.vim'
+Plug 'junegunn/vim-plug'
 
 " Utility Gui
-Plugin 'preservim/tagbar'
-Plugin 'preservim/nerdtree'
+Plug 'preservim/tagbar'
+Plug 'preservim/nerdtree'
 
 " Auto-Complete
-Plugin 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 
 " Generic Programming Helpers
-Plugin 'Townk/vim-autoclose'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'dense-analysis/ale'
+Plug 'Townk/vim-autoclose'
+Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale'
 
 " Cool looks
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'junegunn/goyo.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/goyo.vim'
 
 " Colorschemes
-Plugin 'flazz/vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
 
 " Utilities
-Plugin 'jceb/vim-orgmode'
-Plugin 'tpope/vim-speeddating'
+Plug 'dhruvasagar/vim-dotoo'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-speeddating'
 
 " General Improvements
-Plugin 'mbbill/undotree'
+Plug 'mbbill/undotree'
 
-call vundle#end()
+call plug#end()
 
 filetype plugin indent on
 

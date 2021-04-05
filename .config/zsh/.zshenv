@@ -1,1 +1,1 @@
-source $ZDOTDIR/environment.sh
+source $ZDOTDIR/environment.zsh

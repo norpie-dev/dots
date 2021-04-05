@@ -13,6 +13,6 @@ do
     if $dot; then
         echo `dots relative $arg` >> `dots root`/.gitignore
     else
-        echo `git relative $arg` >> `git root`/.gitignore
+        git-dir && echo `git relative $arg` >> `git root`/.gitignore
     fi 
 done

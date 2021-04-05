@@ -15,8 +15,3 @@
 	insteadOf = https://github.com/
 [init]
 	defaultBranch = main
-[alias]
-	root = rev-parse --show-toplevel
-	ignore = !git-ignore
-	loglive = !git-loglive
-	relative = !git-relative

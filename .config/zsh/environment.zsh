@@ -1,7 +1,15 @@
+# Vim aliases
+alias vim="nvim -p"
+alias nvim="nvim -p"
+alias v="nvim"
+alias vi="nvim"
+# Vim envirnment
+export JAR=/usr/share/java/jdtls/plugins/org.eclipse.equinox.launcher_1.6.100.v20201223-0822.jar
+export GRADLE_HOME=$XDG_DATA_HOME/gradle
+export JDTLS_CONFIG=/usr/share/java/jdtls/config_linux/
+export WORKSPACE=$REPO_DIRECTORY
+
 # Custom Commands
-alias vim="vim -p"
-alias v="vim"
-alias vi="vim"
 alias pulseaudio-start="pulseaudio --exit-idle-time=-1 --daemonize -vv"
 alias wget="wget --hsts-file $HOME/.config/wget/wget-hsts"
 alias cleart="clear && neofetch"
@@ -12,6 +20,7 @@ alias plex="sudo plex"
 alias update="yay -Syu --noconfirm"
 
 # Git aliases
+alias g="git"
 alias gc="git commit"
 alias gs="git status"
 alias gl="git log --oneline --decorate --all --graph"
@@ -60,8 +69,11 @@ export LANG="en_NZ.UTF-8"
 export TERMINAL="st"
 export BROWSER="chromium"
 export PDF_READER="zathura"
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+# Runtimes
+export JAVA_HOME="/usr/lib/jvm/default"
 
 # Config paths
 export SCRIPT_DIR="$HOME/.local/bin"

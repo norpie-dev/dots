@@ -1,6 +1,6 @@
 # Fzf script for repos directory
 function project() {
-    dir=$(find repos -maxdepth 1 | fzf) && cd $dir
+    dir=$(find $REPO_DIRECTORY -maxdepth 1 | fzf) && cd $dir
 }
 
 # cd with history, based on minecraft /back
@@ -16,17 +16,17 @@ function back() {
 function config() {
     file=$(find $XDG_CONFIG_HOME -maxdepth 3 | fzf --preview 'pygmentize {}')
     [[ -d $file ]] && cd $file
-    [[ -f $file ]] && vim $file
+    [[ -f $file ]] && $EDITOR $file
 }
 
 function script() {
     if [[ $# == 0 ]]; then
         file=$(find $SCRIPT_DIR | fzf) 
         [[ -d $file ]] && cd $file
-        [[ -f $file ]] && vim $file
+        [[ -f $file ]] && $EDITOR $file
     else 
         SCRIPT_PATH="$HOME/.local/bin/$1"
         [ ! -f $SCRIPT_PATH ] && echo '#!/bin/zsh' > $SCRIPT_PATH && chmod +x $SCRIPT_PATH 
-        vim $SCRIPT_PATH
+        $EDITOR $SCRIPT_PATH
     fi 
 }

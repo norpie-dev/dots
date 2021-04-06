@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+vim-install && vim-update && vim-clean

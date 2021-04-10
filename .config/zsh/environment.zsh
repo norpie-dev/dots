@@ -74,6 +74,7 @@ export VISUAL="nvim"
 
 # Runtimes
 export JAVA_HOME="/usr/lib/jvm/default"
+alias python3="python"
 
 # Config paths
 export SCRIPT_DIR="$HOME/.local/bin"

@@ -1,3 +1,6 @@
 #!/usr/bin/zsh
 
-pgrep $1 | xargs kill -9
+processes=$(pgrep $1) 
+[[ $processes == "" ]] && echo "no such process" && exit 1
+
+echo $processes | xargs sudo kill -9

@@ -66,3 +66,4 @@ uni
 .config/vim/viminfo
 .config/X11/Xauthority
 .config/vim/plugged
+.local/include

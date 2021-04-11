@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+git dir && basename `git rev-parse --show-toplevel`

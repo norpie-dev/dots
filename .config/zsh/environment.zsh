@@ -11,13 +11,16 @@ export WORKSPACE=$REPO_DIRECTORY
 
 # Custom Commands
 alias pulseaudio-start="pulseaudio --exit-idle-time=-1 --daemonize -vv"
-alias wget="wget --hsts-file $HOME/.config/wget/wget-hsts"
 alias cleart="clear && neofetch"
 alias node80="sudo node app.js"
+alias update="yay -Syu --noconfirm"
+
+# Permission aliases - don't @ me
 alias shutdown="sudo shutdown -h now"
 alias reboot="sudo reboot"
-alias plex="sudo plex"
-alias update="yay -Syu --noconfirm"
+
+# Shorter aliases
+alias c=clear
 
 # Git aliases
 alias g="git"
@@ -90,9 +93,10 @@ export __GL_SHADER_DISK_CACHE_PATH="$HOME/.config/nvidia"
 #export XAUTHORITY="$HOME/.config/X11/Xauthority"
 export CARGO_HOME="$HOME/.local/share/cargo"
 export NVM_DIR="$HOME/.config/nvm"
-alias ssh="ssh -F $HOME/.config/ssh/config -o UserKnownHostsFile=$HOME/.config/ssh/known_hosts"
 export LEIN_HOME="$XDG_DATA_HOME"/lein
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
+alias ssh="ssh -F $HOME/.config/ssh/config -o UserKnownHostsFile=$HOME/.config/ssh/known_hosts"
+alias wget="wget --hsts-file $HOME/.config/wget/wget-hsts"
 
 export _JAVA_AWT_WM_NONREPARENTING=1    # Fix for Java applications in dwm

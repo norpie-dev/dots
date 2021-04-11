@@ -6,6 +6,6 @@ ssh-add-defaults
 start-ckb-next-daemon
 xroot-status-restart
 plex
-pulseaudio -D --exit-idle-time=-1
+pulseaudio-start
 xwallpaper --zoom ~/.config/wallpaper/wallpaper.png
 escapecaps

@@ -22,7 +22,10 @@ Plug 'Townk/vim-autoclose'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'akinsho/nvim-bufferline.lua'
 Plug 'itchyny/lightline.vim'
+
+" Writing
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
@@ -56,9 +59,19 @@ let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
 
-"UktiSnips
+" UltiSnips
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 lua require'bufferline'.setup{}
+
+" Goyo
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 100
+
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = '#83a598'

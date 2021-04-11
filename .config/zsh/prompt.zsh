@@ -1,15 +1,5 @@
-# Blank line after output
-precmd() {
-    precmd() {
-        print -P "$(date +%H:%M) %F{27}%B</>%b%F{15}"
-    }
-}
-
-# Prompt functions
-
 # Variables for prompt
 export NEWLINE=$'\n'
-
 export USERNAME="%n"
 export MACHINE="%m"
 export DIRECTORY="%~"
@@ -40,13 +30,28 @@ Fuchsia="%{13}"
 Aqua="%F{14}"
 White="%F{15}"
 
-export EMPHESIS_COLOR="%F{27}"
+Better_Blue="%F{27}"
 
-#Prompt
-#export PROMPT="%F{27}%B%n%b %F{15}on %F{27}%B%m%b %F{15}in %F{27}%B%~%b ${NEWLINE}%F{15}%T %F{27}%B<>%b %F{15}"
+export EMPHESIS_COLOR_START="$Better_Blue$BOLD_START"
+export EMPHESIS_COLOR_STOP="$White$BOLD_STOP"
 
-export PROMPT="\
-$EMPHESIS_COLOR$BOLD_START$USERNAME$BOLD_STOP$White on $EMPHESIS_COLOR$BOLD_START$MACHINE$BOLD_STOP$White in $EMPHESIS_COLOR$BOLD_START$DIRECTORY$BOLD_STOP$White\
-$NEWLINE\
-$TIME $EMPHESIS_COLOR$BOLD_START<>$BOLD_STOP $White\
-"
+local git_branch='$(git branch-name)'
+local git_email='$(git email)'
+local git_name='$(git name)'
+local git_absolute='$(git absolute)'
+
+set_prompt() {
+    git dir
+    if [[ $? -eq 0 ]]; then
+        PROMPT="$EMPHESIS_COLOR_START${git_name}$EMPHESIS_COLOR_STOP as $EMPHESIS_COLOR_START${git_email}$EMPHESIS_COLOR_STOP on $EMPHESIS_COLOR_START${git_branch}$EMPHESIS_COLOR_STOP in $EMPHESIS_COLOR_START${git_absolute}$EMPHESIS_COLOR_STOP"
+    else
+        PROMPT="$EMPHESIS_COLOR_START$USERNAME$EMPHESIS_COLOR_STOP on $EMPHESIS_COLOR_START$MACHINE$EMPHESIS_COLOR_STOP in $EMPHESIS_COLOR_START$DIRECTORY$EMPHESIS_COLOR_STOP"
+    fi
+    PROMPT+="$NEWLINE"
+    PROMPT+="$White$(date +%H:%M) $EMPHESIS_COLOR_START<>$EMPHESIS_COLOR_STOP "
+}
+
+precmd() {
+    set_prompt
+}
+

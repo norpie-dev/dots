@@ -67,3 +67,5 @@ uni
 .config/X11/Xauthority
 .config/vim/plugged
 .local/include
+.ssh
+.minecraft

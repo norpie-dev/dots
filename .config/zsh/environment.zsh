@@ -14,6 +14,11 @@ alias pulseaudio-start="pulseaudio --exit-idle-time=-1 --daemonize -vv"
 alias cleart="clear && neofetch"
 alias node80="sudo node app.js"
 alias update="yay -Syu --noconfirm"
+alias Make='make -C $(git root)'
+
+# Shortcuts
+alias headphones="output 0"
+alias speakers="output 1"
 
 # Permission aliases - don't @ me
 alias shutdown="sudo shutdown -h now"

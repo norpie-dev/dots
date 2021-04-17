@@ -32,11 +32,11 @@ Plug 'flazz/vim-colorschemes'
 
 " Notetaking
 Plug 'lervag/vimtex'
-Plug 'sirver/ultisnips'
+"Plug 'sirver/ultisnips' " TODO: FIX THIS
 
 " Utilities
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'dhruvasagar/vim-dotoo'
+Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 

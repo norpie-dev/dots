@@ -15,3 +15,5 @@
 	insteadOf = https://github.com/
 [init]
 	defaultBranch = main
+[alias]
+	rr = remote remove

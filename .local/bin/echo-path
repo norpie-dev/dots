@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+parts=(${(s/:/)PATH})
+
+for part in $parts; do
+    echo $part
+done

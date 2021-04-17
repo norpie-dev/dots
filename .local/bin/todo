@@ -1,11 +1,11 @@
 #!/bin/zsh
 
 function open_todo() {
-    vim $TODO_DIRECTORY/$1.dotoo
+    vim $TODO_DIRECTORY/$1.org
 }
 
 function open_menu() {
-    echo "Not implemented yet!"
+    ls $TODO_DIRECTORY
 }
 
 if [[ $# -eq 1 ]]; then

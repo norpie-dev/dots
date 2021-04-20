@@ -1,5 +1,8 @@
 # Plugins
-source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh >/dev/null 
+source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 
+clear
+
+source ~/.config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 
 clear
 
 # Plugin settings

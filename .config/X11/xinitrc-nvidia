@@ -10,6 +10,6 @@ fi
 
 # start some nice programs
 
-#nvidia-settings --load-config-only &
-#picom &
-#dbus-launch startdwm
+desktop-xrandr &
+picom &
+dbus-launch startdwm

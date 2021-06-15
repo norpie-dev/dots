@@ -11,14 +11,10 @@ export WORKSPACE=$REPO_DIRECTORY
 
 # Custom Commands
 alias pulseaudio-start="pulseaudio --exit-idle-time=-1 --daemonize -vv"
-alias cleart="clear && neofetch"
+alias cn="clear && neofetch"
 alias node80="sudo node app.js"
 alias update="yay -Syu --noconfirm"
 alias Make='make -C $(git root)'
-
-# Shortcuts
-alias headphones="output 0"
-alias speakers="output 1"
 
 # Permission aliases - don't @ me
 alias shutdown="sudo shutdown -h now"
@@ -63,7 +59,7 @@ alias cp="cp -v"
 export HOME="/home/konsta"
 
 # Exports
-export PATH=$HOME/.local/bin:$HOME/.local/bin/xroot-panels:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/bin/xroot-panels:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 
 # XDG
 export XDG_CONFIG_HOME=$HOME/.config
@@ -75,10 +71,10 @@ export LANG="en_NZ.UTF-8"
 
 # Default apps
 export TERMINAL="st"
-export BROWSER="chromium"
+export BROWSER="google-chrome-stable"
 export PDF_READER="zathura"
 export EDITOR="nvim"
-export VISUAL="nvim"
+export VISUAL='st nvim'
 
 # Runtimes
 export JAVA_HOME="/usr/lib/jvm/default"

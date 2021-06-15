@@ -7,15 +7,36 @@
 \usepackage{amsmath} % Math
 \usepackage{amssymb} % More Math
 \usepackage{graphicx} % Images
+\usepackage{listings} % Code snippets
+
+\lstset
+{ %Formatting for code in appendix
+    language=Java,
+    basicstyle=\footnotesize,
+    frame=single,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=1,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
 
 \title{Document Title}
 \author{Konsta Kuosmanen}
-\date{January 1, 1970}
+\date{\today}
 
 \begin {document}
 
 \maketitle
 
+\pagebreak
+
 \tableofcontents
+
+\pagebreak
+
+% Write contents of the document under this comment.
 
 \end{document}

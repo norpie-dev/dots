@@ -1,3 +1,0 @@
-#!/bin/sh
-
-cd /home/konsta/.local/share/tor-browser && ./start-tor-browser.desktop

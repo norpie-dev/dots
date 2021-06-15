@@ -3,9 +3,9 @@
 source ~/.config/zsh/.zshrc
 
 ssh-add-defaults
+xwallpaper --zoom ~/.config/wallpaper/wallpaper.png
 start-ckb-next-daemon
 xroot-status-restart
-plex
 pulseaudio-start
-xwallpaper --zoom ~/.config/wallpaper/wallpaper.png
+plex
 escapecaps

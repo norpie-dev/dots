@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+find src/* | entr ant-date

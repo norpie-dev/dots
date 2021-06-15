@@ -17,7 +17,15 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 " For Vim<8, replace EndOfBuffer by NonText
 autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
 
+autocmd! User GoyoLeave hi Normal guibg=NONE ctermbg=NONE
+
+
 " Lightline Configuration
 set laststatus=2
 set noshowmode
-let g:lightline = {'colorscheme': 'wombat',}
+let g:lightline = {
+    \'colorscheme': 'wombat',
+    \'enable': {
+        \'tabline': 0
+    \}
+\}

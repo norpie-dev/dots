@@ -81,3 +81,7 @@ uni
 .config/torbrowser
 .config/unity3d
 .config/whoozle.github.io
+.config/ghb
+.config/autostart
+.local/bin/__pycache__
+.config/autostart

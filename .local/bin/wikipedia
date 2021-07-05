@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+chrome "https://en.wikipedia.org/wiki/$1"

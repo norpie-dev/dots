@@ -3,6 +3,7 @@ alias vim="nvim -p"
 alias nvim="nvim -p"
 alias v="nvim"
 alias vi="nvim"
+alias sim="svim"
 # Vim envirnment
 export JAR=/usr/share/java/jdtls/plugins/org.eclipse.equinox.launcher_1.6.100.v20201223-0822.jar
 export GRADLE_HOME=$XDG_DATA_HOME/gradle
@@ -11,7 +12,7 @@ export WORKSPACE=$REPO_DIRECTORY
 
 # Custom Commands
 alias pulseaudio-start="pulseaudio --exit-idle-time=-1 --daemonize -vv"
-alias cn="clear && neofetch"
+alias background="wallpaper"
 alias node80="sudo node app.js"
 alias update="yay -Syu --noconfirm"
 alias Make='make -C $(git root)'
@@ -21,7 +22,10 @@ alias shutdown="sudo shutdown -h now"
 alias reboot="sudo reboot"
 
 # Shorter aliases
-alias c=clear
+alias c="clear"
+alias cn="clear && neofetch"
+alias ct="cn"
+alias pdf="zathura"
 
 # Git aliases
 alias g="git"
@@ -96,6 +100,7 @@ export CARGO_HOME="$HOME/.local/share/cargo"
 export NVM_DIR="$HOME/.config/nvm"
 export LEIN_HOME="$XDG_DATA_HOME"/lein
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
 alias ssh="ssh -F $HOME/.config/ssh/config -o UserKnownHostsFile=$HOME/.config/ssh/known_hosts"
 alias wget="wget --hsts-file $HOME/.config/wget/wget-hsts"

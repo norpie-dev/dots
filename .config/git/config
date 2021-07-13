@@ -8,7 +8,7 @@
 	name = Konsta Kuosmanen
 	email = konstamskuosmanen@gmail.com
 [core]
-	editor = vim
+	editor = nvim
 	pager = less
 	sshCommand = ssh -o UserKnownHostsFile=~/.config/ssh/known_hosts -o StrictHostKeyChecking=no
 [url "ssh://git@github.com/"]

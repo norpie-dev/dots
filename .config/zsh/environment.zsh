@@ -3,23 +3,28 @@ alias vim="nvim -p"
 alias nvim="nvim -p"
 alias v="nvim"
 alias vi="nvim"
-alias sim="svim"
+alias sim="sudo vim"
 # Vim envirnment
-export JAR=/usr/share/java/jdtls/plugins/org.eclipse.equinox.launcher_1.6.100.v20201223-0822.jar
+export JAR="/usr/share/java/jdtls/plugins/org.eclipse.equinox.launcher_*"
 export GRADLE_HOME=$XDG_DATA_HOME/gradle
 export JDTLS_CONFIG=/usr/share/java/jdtls/config_linux/
 export WORKSPACE=$REPO_DIRECTORY
 
 # Custom Commands
 alias pulseaudio-start="pulseaudio --exit-idle-time=-1 --daemonize -vv"
-alias background="wallpaper"
 alias node80="sudo node app.js"
 alias update="yay -Syu --noconfirm"
 alias Make='make -C $(git root)'
 
+# Synonyms
+alias quit="exit"
+alias background="wallpaper"
+
 # Permission aliases - don't @ me
 alias shutdown="sudo shutdown -h now"
 alias reboot="sudo reboot"
+alias sudo='sudo '
+#alias sudo="sudo -E"
 
 # Shorter aliases
 alias c="clear"
@@ -61,6 +66,7 @@ alias cp="cp -v"
 
 # Define home
 export HOME="/home/konsta"
+export SHOME="$HOME"
 
 # Exports
 export PATH=$HOME/.local/bin:$HOME/.local/bin/xroot-panels:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl

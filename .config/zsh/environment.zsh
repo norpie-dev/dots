@@ -35,6 +35,7 @@ alias pdf="zathura"
 # Git aliases
 alias g="git"
 alias gc="git commit"
+alias gb="git branch"
 alias gs="git status"
 alias gl="git log --oneline --decorate --all --graph"
 alias ga="git add"

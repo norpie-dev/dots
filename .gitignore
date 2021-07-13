@@ -102,3 +102,5 @@ uni
 .config/spicetify
 .config/xautoclick
 .local/share/autokey
+repos//home/konsta/.local/share/games
+.local/share/games

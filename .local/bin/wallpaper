@@ -1,6 +1,0 @@
-#!/bin/zsh
-
-selection=$(find ~/.config/wallpaper -name "*.png" | fzf-img)
-[[ $selection == "" ]] && exit 1 
-cp $selection ~/.config/wallpaper/wallpaper.png
-xwallpaper --zoom ~/.config/wallpaper/wallpaper.png

@@ -1,3 +1,0 @@
-#!/bin/sh
-
-mpv "$1" --screen=0 --wid=0 --ytdl-format="best" --hwdec=d3d11va & disown

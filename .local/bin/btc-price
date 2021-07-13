@@ -1,3 +1,0 @@
-#!/usr/bin/zsh
-
-curl "eur.rate.sx/BTC"

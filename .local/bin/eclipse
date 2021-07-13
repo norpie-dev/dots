@@ -1,3 +1,0 @@
-#!/bin/zsh
-
-export HOME=/home/eclipse && /opt/eclipse/eclipse

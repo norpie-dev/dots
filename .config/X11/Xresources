@@ -1,8 +1,0 @@
-st.alpha: 0.93
-st.foreground: #ebdbb2
-st.background: #090909
-
-dmenu.background: #1D2021
-dmenu.selbackground: #689D6A
-dmenu.foreground: #EBDBB2
-dmenu.selforeground: #EBDBB2

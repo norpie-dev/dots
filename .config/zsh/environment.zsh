@@ -1,9 +1,9 @@
 # Vim aliases
 alias vim="nvim -p"
 alias nvim="nvim -p"
-alias v="nvim"
-alias vi="nvim"
-alias sim="svim"
+alias v="nvim -p"
+alias vi="nvim -p"
+alias sim="sudo nvim -p"
 # Vim envirnment
 export JAR=/usr/share/java/jdtls/plugins/org.eclipse.equinox.launcher_1.6.100.v20201223-0822.jar
 export GRADLE_HOME=$XDG_DATA_HOME/gradle
@@ -20,6 +20,7 @@ alias Make='make -C $(git root)'
 # Permission aliases - don't @ me
 alias shutdown="sudo shutdown -h now"
 alias reboot="sudo reboot"
+alias sudo='sudo '
 
 # Shorter aliases
 alias c="clear"

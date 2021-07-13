@@ -1,1 +1,1 @@
-.config/X11/xinitrc-nvidia
+.config/X11/xinitrc-amd

@@ -22,7 +22,6 @@ uni
 .local/bin/xroot-status-start
 .local/bin/xroot-status-stop
 .local/bin/xroot-status-update
-.xinitrc
 .config/Musixmatch/
 .config/st
 .config/spotify

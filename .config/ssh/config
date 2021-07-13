@@ -1,0 +1,13 @@
+Host desktop
+    HostName 192.168.0.236
+    User konsta
+Host server
+    HostName 192.168.0.200
+    User konsta
+Host github.org
+    IdentityFile ~/.config/ssh/keys/private/github_rsa
+Host *
+    StrictHostKeyChecking no
+    UserKnownHostsFile ~/.config/ssh/known_hosts
+    LogLevel QUIET
+    ConnectTimeout 10
